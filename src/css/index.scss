@@ -2,8 +2,8 @@ body {
   width: 500px;
   height: 500px;
   border: 1px solid red;
-  div {
-    border: 1px solid red;
+  .syq {
+    border: 1px solid green;
     display: flex;
     transform: translateX(-50%);
     ::placeholder {

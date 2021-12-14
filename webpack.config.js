@@ -1,9 +1,11 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
+const $ = require('jquery')
 module.exports = {
   entry: {
+    jquery: $,
     main: './src/index.js'
   },
   output: {
@@ -11,7 +13,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true
   },
-  mode:'development',
+  mode: 'development',
   module: {
     rules: [
       {
@@ -53,17 +55,23 @@ module.exports = {
       }
     ]
   },
-  plugins:[
+  plugins: [
     new HtmlWebpackPlugin({
-      template:'./src/index.html'
+      template: './src/index.html'
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css' //重命名输出的css文件，也可不写默认
     }),
     new CopyPlugin({
-      patterns: [
-        { from: "src/css", to: "css" },
-      ],
-    }),
-  ]
+      patterns: [{ from: 'src/css', to: 'css' }]
+    })
+  ],
+  devServer: {
+    static: './dist',
+    historyApiFallback: true,
+    hot: true,
+    compress: true, // gzip压缩
+    port: 3000,
+    open: true //自动打开浏览器
+  }
 }
