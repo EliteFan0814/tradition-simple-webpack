@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
   entry: {
     main: './src/index.js'
@@ -10,6 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true
   },
+  mode:'development',
   module: {
     rules: [
       {
@@ -21,7 +23,7 @@ module.exports = {
         include: path.resolve(__dirname, 'src'),
         type: 'asset/resource',
         generator: {
-          filename: 'static/img/[name][ext]'
+          filename: 'imgs/[name][ext]'
         }
       },
       {
@@ -29,7 +31,7 @@ module.exports = {
         include: path.resolve(__dirname, 'src'),
         type: 'asset/resource',
         generator: {
-          filename: 'static/font/[name][ext]'
+          filename: 'font/[name][ext]'
         }
       },
       // 处理scss文件
@@ -54,6 +56,14 @@ module.exports = {
   plugins:[
     new HtmlWebpackPlugin({
       template:'./src/index.html'
-    })
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css' //重命名输出的css文件，也可不写默认
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "src/css", to: "css" },
+      ],
+    }),
   ]
 }

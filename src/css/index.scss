@@ -1,0 +1,16 @@
+body {
+  width: 500px;
+  height: 500px;
+  border: 1px solid red;
+  div {
+    border: 1px solid red;
+    display: flex;
+    transform: translateX(-50%);
+    ::placeholder {
+      color: gray;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
