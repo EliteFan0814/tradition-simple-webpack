@@ -2,10 +2,9 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
-const $ = require('jquery')
 module.exports = {
   entry: {
-    jquery: $,
+    // jquery: './src/library/jquery3.6.min.js',
     main: './src/index.js'
   },
   output: {
@@ -57,13 +56,14 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
+      inject: 'body',
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css' //重命名输出的css文件，也可不写默认
     }),
     new CopyPlugin({
-      patterns: [{ from: 'src/css', to: 'css' }]
+      patterns: [{ from: 'src/library', to: 'library' }]
     })
   ],
   devServer: {

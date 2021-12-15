@@ -1,14 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- <link rel="stylesheet" href="./library/reset.css"> -->
+  <script src="./library/jquery1.7.2.min.js"></script>
 </head>
+
 <body>
-  <div class="fpc">我范培超</div>
-  <div class="syq">hahahahah</div>
-  <img src="./imgs/example.png" alt="">
+  <div class="fpc-wrap">
+    <div class="banner-wrap">
+      <div class="s-wrap frame">
+        <div class="s-title">免费评估 · 专精特新 · 财政补贴</div>
+        <form class="search">
+          <div class="select-wrap">
+            <select id="free-charge-select">
+              <option value="">请选择</option>
+              <option value="1">美国</option>
+              <option value="2">英国</option>
+              <option value="3">新加坡</option>
+            </select>
+            <img src="./imgs/ai-arrow-down.png" alt="">
+          </div>
+          <div class="banner-search">
+            <div class="search-input">
+              <input name="free-charge-input" class="base-input" type="text" placeholder="请输入要查询的海外公司名称，如中细软">
+            </div>
+            <button id="verification-name" class="base-button">获取核名结果</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- 什么是专精特新企业？ -->
+    <div class="professional-wrap frame">
+      <div class="base-title">
+        <img class="title-1" src="./imgs/meaning.png" alt="">
+        <span class="title-2">什么是<span class="base-blue">专精特新</span>企业？</span>
+      </div>
+      <div class="p-list">
+        <div class="p-item">
+          <img src="./imgs/p1.png" alt="">
+          <div class="p-content">
+            <div class="p-title">专业化</div>
+            <div class="p-text">是指采用专项技术或工艺通过专业化生产制造的专用性强、专业特点明显、市场专业性强的产品。</div>
+          </div>
+        </div>
+        <div class="p-item">
+          <img src="./imgs/p2.png" alt="">
+          <div class="p-content">
+            <div class="p-title">精细化</div>
+            <div class="p-text">是指采用先进适用技术或工艺，按照精益求精的理念，建立精细高效的管理制度和流程，通过精细化管理，精心设计生产的精良产品。</div>
+          </div>
+        </div>
+        <div class="p-item">
+          <img src="./imgs/p3.png" alt="">
+          <div class="p-content">
+            <div class="p-title">特色化</div>
+            <div class="p-text">是指采用独特的工艺、技术、配方或特殊原料研制生产的，具有地域特点或具有特殊功能的产品。</div>
+          </div>
+        </div>
+        <div class="p-item">
+          <img src="./imgs/p4.png" alt="">
+          <div class="p-content">
+            <div class="p-title">新颖化</div>
+            <div class="p-text">是指依靠自主创新、转化科技成果、联合创新或引进消化吸收再创新方式研制生产的，具有自主知识产权的高新技术产品。</div>
+          </div>
+        </div>
+      </div>
+      <div class="base-btn-wrap">
+        <button id="verification-name" class="base-button"><span>免费获取申报方案 </span><img src="./imgs/gt.png"
+            class="gt"></img></button>
+      </div>
+    </div>
+    <!-- 企业专精特新认定优势 -->
+    <div class="advantage-wrap">
+      <div class="base-title">
+        <img class="title-1" src="./imgs/advantage.png" alt="">
+        <span class="title-2">企业<span class="base-blue">专精特新</span>认定优势</span>
+      </div>
+      <div class="base-btn-wrap advantage-btn">
+        <button id="verification-name" class="base-button"><span>更多认定优势咨询 </span><img src="./imgs/gt.png"
+            class="gt"></img></button>
+      </div>
+    </div>
+    <!-- 企业专精特新认定条件 -->
+    <div class="condition-wrap">
+      <div class="base-title">
+        <img class="title-1" src="./imgs/service.png" alt="">
+        <span class="title-2">企业<span class="base-blue">专精特新</span>认定条件</span>
+      </div>
+      <div class="c-content">
+        <div class="content-wrap">
+          <div class="c-l">
+            <div class="c-title">符合以下条件即可申请</div>
+            <ul class="c-list">
+              <li><span class="dot"></span>连续经营2年以上的中小微型企业<span></span></li>
+              <li><span class="dot"></span>符合北京市高精尖产业指导意见<span></span></li>
+              <li><span class="dot"></span>近三年无严重违法违规失信行为<span></span></li>
+              <li><span class="dot"></span>上年度营收达到1500万元或两年净利润600万元<span></span></li>
+              <li><span class="dot"></span>企业取得质量环境、技术工程等资质认定<span></span></li>
+              <li><span class="dot"></span>企业拥有主要从事的特定细分领域的产品（服务）<span></span></li>
+              <li><span class="dot"></span>拥有发明授权专利或其他知识产权<span></span></li>
+              <li><span class="dot"></span>企业上年度研发费100万元以上<span></span></li>
+            </ul>
+          </div>
+          <div class="c-r"><img src="./imgs/tree.png" alt=""></div>
+        </div>
+        <div class="base-btn-wrap">
+          <button id="verification-name" class="base-button"><span>更多认定优势咨询 </span><img src="./imgs/gt.png"
+              class="gt"></img></button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

@@ -1,3 +1,5 @@
+import './library/reset.css'
 import './index.html'
 import './css/index.scss'
-import './css/22.scss'
+
+console.log($('.fpc').text())
