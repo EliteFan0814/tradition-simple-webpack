@@ -21,20 +21,23 @@
         <form class="search">
           <div class="select-wrap">
             <select id="search-select-value">
-              <option>行业类型</option>
-              <option value="美国">美国</option>
-              <option value="英国">英国</option>
-              <option value="新加坡">新加坡</option>
+              <option value="">行业类型</option>
+              <option value="新一代信息技术">新一代信息技术</option>
+              <option value="生物与新医药">生物与新医药</option>
+              <option value="新能源与节能">新能源与节能</option>
+              <option value="航天科技">航天科技</option>
+              <option value="新材料">新材料</option>
+              <option value="其他">其他</option>
             </select>
             <img src="./imgs/ai-arrow-down.png" alt="">
           </div>
           <div class="banner-search">
             <div class="search-input">
-              <input name="free-charge-input" class="base-input" type="text" maxlength="11"
+              <input name="input-access-value" class="base-input" type="text" maxlength="11"
                 placeholder="请输入手机号，方便联系您告知结果">
               <div class="search-error base-red">请输入正确的手机号码</div>
             </div>
-            <button id="verification-name" class="base-button">获取评估结果</button>
+            <button id="assess-search" class="base-button">获取评估结果</button>
           </div>
         </form>
       </div>
@@ -76,8 +79,8 @@
         </div>
       </div>
       <div class="base-btn-wrap">
-        <button id="verification-name" class="base-button"><span>免费获取申报方案 </span><img src="./imgs/gt.png"
-            class="gt"></img></button>
+        <button data-title="了解详细政策解读" data-btn="获取政策解读" data-show="[0,0,1]" class="base-button index-btn"><span>免费获取申报方案
+          </span><img src="./imgs/gt.png" class="gt"></img></button>
       </div>
     </div>
     <!-- 企业专精特新认定优势 -->
@@ -87,8 +90,8 @@
         <span class="title-2">企业<span class="base-blue">专精特新</span>认定优势</span>
       </div>
       <div class="base-btn-wrap advantage-btn">
-        <button id="verification-name" class="base-button"><span>更多认定优势咨询 </span><img src="./imgs/gt.png"
-            class="gt"></img></button>
+        <button data-title="了解更多优惠政策" data-btn="获取更多优势" data-show="[0,0,1]"
+          class="base-button  index-btn"><span>更多认定优势咨询 </span><img src="./imgs/gt.png" class="gt"></img></button>
       </div>
     </div>
     <!-- 企业专精特新认定条件 -->
@@ -115,8 +118,8 @@
           <div class="c-r"><img src="./imgs/tree.png" alt=""></div>
         </div>
         <div class="base-btn-wrap condition-btn">
-          <button id="verification-name" class="base-button"><span>分析是否符合认定条件 </span><img src="./imgs/gt.png"
-              class="gt"></img></button>
+          <button data-title="分析是否符合认定条件" data-btn="获取认定条件" data-show="[0,0,1]"
+            class="base-button  index-btn"><span>分析是否符合认定条件 </span><img src="./imgs/gt.png" class="gt"></img></button>
         </div>
       </div>
     </div>
@@ -169,8 +172,8 @@
         </div>
       </div>
       <div class="base-btn-wrap">
-        <button id="verification-name" class="base-button"><span>了解更多认定领域 </span><img src="./imgs/gt.png"
-            class="gt"></img></button>
+        <button data-title="咨询是否符合认定领域" data-btn="获取认定领域" data-show="[0,1,1]"
+          class="base-button  index-btn"><span>了解更多认定领域 </span><img src="./imgs/gt.png" class="gt"></img></button>
       </div>
     </div>
     <!-- 企业专精特新认定流程 -->
@@ -249,26 +252,26 @@
         <div class="pro-circle">6</div>
       </div>
       <div class="base-btn-wrap process-btn">
-        <button id="verification-name" class="base-button"><span>详细认定流程咨询 </span><img src="./imgs/gt.png"
-            class="gt"></img></button>
+        <button data-title="咨询详细认定流程" data-btn="获取认定流程" data-show="[0,0,1]"
+          class="base-button  index-btn"><span>详细认定流程咨询 </span><img src="./imgs/gt.png" class="gt"></img></button>
       </div>
     </div>
     <!-- mask全局蒙版 -->
-    <div class="mask">
-      <!-- 获取认定方案 -->
+    <!-- 获取认定方案 -->
+    <div class="mask mask-program">
       <div class="base-dialog">
         <div class="close">
           <img class="dialog-close" src="./imgs/close.png" alt="">
         </div>
         <div class="title">
-          <span class="slogan">获取认定方案</span><br>
+          <span class="slogan"></span><br>
           <span class="pub-title">请完善信息，稍后会有专业顾问电话告知结果</span>
         </div>
-        <form>
+        <form id="dialog-form">
           <div class="form-item">
             <span class="name">行业领域：</span>
             <div class="select-wrap">
-              <select id="free-charge-select">
+              <select id="dialog-select-industry-value">
                 <option value="">行业类型</option>
                 <option value="1">美国</option>
                 <option value="2">英国</option>
@@ -292,26 +295,27 @@
             </div>
           </div>
           <div class="form-item">
-            <span class="name">行业领域：</span>
+            <span class="name"></img> <span>所属行业：</span></span>
             <div class="select-wrap">
-              <input name="free-charge-value" class="base-input" placeholder="请输入您的行业" type="text">
+              <input name="dialog-input-value" class="base-input" placeholder="请输入您的行业" type="text">
             </div>
           </div>
           <div class="form-item">
-            <!-- <span class="name"><span class="base-red">*</span> <span>联系方式：</span></span> -->
             <span class="name"><img src="./imgs/star.png" class="must-img"></img> <span>联系方式：</span></span>
             <div class="select-wrap required">
-              <input name="free-charge-value-phone" maxlength="11" class="base-input" placeholder="输入联系方式" type="text">
-              <div class="error base-red">请输入正确的手机号码</div>
+              <input name="dialog-phone-value" maxlength="11" class="base-input" placeholder="输入联系方式" type="text">
+              <div class="dialog-error base-red">请输入正确的手机号码</div>
             </div>
           </div>
         </form>
         <div class="btn-wrap">
-          <button id="free-charge-submit" class="base-button submit-btn">获取认定方案</button>
+          <button id="dialog-submit-btn" class="base-button submit-btn"></button>
         </div>
       </div>
-      <!-- 提交成功 -->
-      <div class="base-dialog submit-success">
+    </div>
+    <!-- 提交成功 -->
+    <div class="mask mask-success">
+      <div class="base-dialog">
         <div class="close">
           <img class="success-close" src="./imgs/close.png" alt="">
         </div>

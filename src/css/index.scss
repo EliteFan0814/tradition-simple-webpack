@@ -33,7 +33,7 @@
     outline: none; /*聚焦input的蓝色边框*/
     resize: none; /*textarea 禁止拖拽*/
     border: none; /*去除边框*/
-    -webkit-appearance: none; /*常用于IOS下移除原生样式*/
+    appearance: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*点击高亮的颜色*/
     &::placeholder {
       font-family: MicrosoftYaHei;
@@ -423,7 +423,6 @@
 
   // 全局蒙版
   .mask {
-    display: none;
     position: fixed;
     left: 0;
     top: 0;
@@ -432,7 +431,6 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 10;
     .base-dialog {
-      display: none;
       background-color: #fff;
       position: absolute;
       top: 50%;
@@ -531,7 +529,7 @@
           }
           .required {
             position: relative;
-            .error {
+            .dialog-error {
               display: none;
               font-size: 14px;
               position: absolute;
@@ -555,8 +553,9 @@
         }
       }
     }
-    .submit-success {
-      display: none;
-    }
+  }
+  .mask-program,
+  .mask-success {
+    display: none;
   }
 }
