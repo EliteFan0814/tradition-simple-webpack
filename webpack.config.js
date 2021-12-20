@@ -57,13 +57,16 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      inject: 'body',
+      inject: 'body'
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css' //重命名输出的css文件，也可不写默认
     }),
     new CopyPlugin({
-      patterns: [{ from: 'src/library', to: 'library' }]
+      patterns: [
+        { from: 'src/library', to: 'library' },
+        { from: 'src/css/index.scss', to: 'css/main.scss' }
+      ]
     })
   ],
   devServer: {

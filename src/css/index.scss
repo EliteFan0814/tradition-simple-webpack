@@ -1,3 +1,4 @@
+@import url(../library/reset.scss);
 .fpc-wrap {
   overflow-x: hidden;
   font-family: MicrosoftYaHei;
@@ -143,6 +144,9 @@
             padding: 19px 9px;
             letter-spacing: 0px;
             color: #333333;
+            &::-ms-expand {
+              display: none;
+            }
           }
           img {
             position: absolute;
@@ -518,6 +522,9 @@
               line-height: 1;
               letter-spacing: 0px;
               color: #333333;
+              &::-ms-expand {
+                display: none;
+              }
             }
             img {
               position: absolute;
