@@ -564,5 +564,8 @@
   .mask-program,
   .mask-success {
     display: none;
+    .success-dialog {
+      padding-bottom: 10px;
+    }
   }
 }
