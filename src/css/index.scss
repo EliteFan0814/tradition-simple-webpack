@@ -1,5 +1,10 @@
-@import url(../library/reset.scss);
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 .fpc-wrap {
+  @import '../library/reset.scss';
   overflow-x: hidden;
   font-family: MicrosoftYaHei;
   line-height: 1;
