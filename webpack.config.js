@@ -74,7 +74,7 @@ module.exports = {
     historyApiFallback: true,
     hot: true,
     compress: true, // gzip压缩
-    port: 3000,
+    port: 'auto', //
     open: true //自动打开浏览器
   }
 }
