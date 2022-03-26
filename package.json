@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/EliteFan0814/tradition-simple-webpack#readme",
   "dependencies": {
+    "amfe-flexible": "^2.2.1",
     "jquery": "^1.7.2"
   },
   "devDependencies": {
@@ -30,6 +31,7 @@
     "postcss": "^8.4.5",
     "postcss-loader": "^6.2.1",
     "postcss-preset-env": "^7.0.1",
+    "postcss-pxtorem": "^6.0.0",
     "sass": "^1.45.0",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",

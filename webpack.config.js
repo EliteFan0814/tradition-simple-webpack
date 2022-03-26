@@ -45,7 +45,15 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [['postcss-preset-env']]
+                plugins: [
+                  ['postcss-preset-env'],
+                  require('postcss-pxtorem')({
+                    rootValue: 37.5,
+                    // 使用px2rem的css选择器
+                    // propList: ['font', 'font-size', 'line-height', 'letter-spacing', 'width', 'height', '*border*']
+                    propList: ['*','!border']
+                  })
+                ]
               }
             }
           },
@@ -75,6 +83,6 @@ module.exports = {
     hot: true,
     compress: true, // gzip压缩
     port: 'auto', //
-    open: true //自动打开浏览器
+    open: false //自动打开浏览器
   }
 }
