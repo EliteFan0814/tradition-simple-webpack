@@ -17,12 +17,164 @@
 
 <body>
   <div class="fpc-wrapper">
-    <button class="base-btn ">获取详细注册方案</button>
-    <button class="base-btn sss">咨询办理</button>
+    <!-- <button class="base-btn ">获取详细注册方案</button>
+    <button class="base-btn sss">咨询办理</button> -->
     <div class="search-wrap">
-      <div class="search-box">
+      <div class="first-slogan"><img src="./imgs/first-slogan.png" alt=""></div>
+      <div class="search-box flex-cc">
         <div class="input-wrap">
           <input type="text" placeholder="请输入商标名称，如中细软">
+        </div>
+        <button class="base-btn search-btn">查询能否注册</button>
+      </div>
+      <!-- title 快捷工具 -->
+      <div class="base-title-head">
+        <div class="title-up flex-cc">
+          <img class="beafter before" src="./imgs/beafter.png" alt="">
+          <span class="beafter-span">快捷工具</span>
+          <img class="beafter after" src="./imgs/beafter.png" alt="">
+        </div>
+        <div class="sub">商标注册常用工具</div>
+      </div>
+      <div class="quick-wrap quick0">
+        <div class="quick-title flex-cc">
+          <span class="q-title q-title-active" data-index="0">行业分类查询</span>
+          <span class="q-title" data-index="1">商标近似查询</span>
+          <span class="q-title" data-index="2">购买现成商标</span>
+        </div>
+        <!-- 行业分类查询 -->
+        <div class="category flex">
+          <ul class="slide industry-list">
+            <li class="active-li" data-index="0">餐饮</li>
+            <li data-index="1">食品</li>
+            <li data-index="2">服饰</li>
+            <li data-index="3">家居</li>
+            <li data-index="4">化妆品</li>
+            <li data-index="5">旅游</li>
+            <li data-index="6">传媒</li>
+            <li data-index="7">摄影</li>
+            <li data-index="8">汽车</li>
+            <li data-index="9">化工</li>
+            <li data-index="10">医疗</li>
+            <li data-index="11">母婴</li>
+            <li data-index="12">珠宝</li>
+            <li data-index="13">宠物</li>
+            <li data-index="14">互联网/IT</li>
+            <li data-index="15">乐器</li>
+            <li data-index="16">健身</li>
+            <li data-index="17">地产</li>
+            <li data-index="18">建材</li>
+            <li data-index="-1">其它</li>
+          </ul>
+          <div class="slide-content">
+            <div class="industry-main">
+              <!-- 核心注册类别 -->
+              <div class="core core-first">
+                <h3 class="flex-c"><i class="dot"></i>核心注册类别</h3>
+                <!-- 餐饮 -->
+                <div class="core-content flex core-item core-item-active" data-index="0">
+                  <div class="c-c-item flex-c">
+                    <div class="img-wrap "><img src="./imgs/43.png" alt=""></div> <span>43类-餐饮住宿</span>
+                  </div>
+                  <div class="c-c-item flex-c">
+                    <div class="img-wrap "><img src="./imgs/35.png" alt=""></div> <span>35类-广告销售</span>
+                  </div>
+                </div>
+                <!-- 食品 -->
+                <div class="core-content flex core-item" data-index="1">
+                  <div class="c-c-item flex-c">
+                    <div class="img-wrap "><img src="./imgs/29.png" alt=""></div> <span>29类-食品</span>
+                  </div>
+                  <div class="c-c-item flex-c">
+                    <div class="img-wrap "><img src="./imgs/30.png" alt=""></div> <span>30类-方便食品</span>
+                  </div>
+                </div>
+                <!-- 服装 -->
+                <div class="core-content flex core-item" data-index="2">
+                  <div class="c-c-item flex-c">
+                    <div class="img-wrap "><img src="./imgs/18.png" alt=""></div> <span>18类-箱包皮具</span>
+                  </div>
+                  <div class="c-c-item flex-c">
+                    <div class="img-wrap "><img src="./imgs/25.png" alt=""></div> <span>25类-服饰鞋帽</span>
+                  </div>
+                </div>
+                <!-- 家居 -->
+                <div class="core-content flex core-item" data-index="3">
+                  <div class="c-c-item flex-c">
+                    <div class="img-wrap "><img src="./imgs/11.png" alt=""></div> <span>11类-灯具空调</span>
+                  </div>
+                  <div class="c-c-item flex-c">
+                    <div class="img-wrap "><img src="./imgs/19.png" alt=""></div> <span>19类-地板门窗</span>
+                  </div>
+                </div>
+                <!-- 化妆品 -->
+                <div class="core-content flex core-item" data-index="4">
+                  <div class="c-c-item flex-c">
+                    <div class="img-wrap "><img src="./imgs/03.png" alt=""></div> <span>03类-日化用品</span>
+                  </div>
+                  <div class="c-c-item flex-c">
+                    <div class="img-wrap "><img src="./imgs/21.png" alt=""></div> <span>21类-化妆用具</span>
+                  </div>
+                </div>
+              </div>
+              <!-- 关联注册类别 -->
+              <div class="core">
+                <h3 class="flex-c"><i class="dot"></i>关联注册类别</h3>
+                <div class="core-content flex relevance-item relevance-item-active" data-index="0">
+                  <div class="c-c-item flex-c">
+                    <div class="img-wrap "><img src="./imgs/07.png" alt=""></div> <span>07类-厨房电器</span>
+                  </div>
+                  <div class="c-c-item flex-c">
+                    <div class="img-wrap "><img src="./imgs/08.png" alt=""></div> <span>08类-餐具</span>
+                  </div>
+                  <div class="c-c-item flex-c">
+                    <div class="img-wrap "><img src="./imgs/29.png" alt=""></div> <span>29类-肉类干果</span>
+                  </div>
+                  <div class="c-c-item flex-c">
+                    <div class="img-wrap "><img src="./imgs/30.png" alt=""></div> <span>30类-方便食品</span>
+                  </div>
+                </div>
+                <div class="core-content flex relevance-item" data-index="1">
+                  <div class="c-c-item flex-c">
+                    <div class="img-wrap "><img src="./imgs/16.png" alt=""></div> <span>16类-食品包装</span>
+                  </div>
+                  <div class="c-c-item flex-c">
+                    <div class="img-wrap "><img src="./imgs/35.png" alt=""></div> <span>35类-广告销售</span>
+                  </div>
+                  <div class="c-c-item flex-c">
+                    <div class="img-wrap "><img src="./imgs/40.png" alt=""></div> <span>40类-食品加工</span>
+                  </div>
+                  <div class="c-c-item flex-c">
+                    <div class="img-wrap "><img src="./imgs/43.png" alt=""></div> <span>43类-餐饮住宿</span>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <button class="base-btn">获取详细注册方案</button>
+              </div>
+            </div>
+            <div class="industry-other">
+              <h3>更多行业注册方案咨询</h3>
+              <div class="other-form">
+                <div class="base-input-wrap">
+                  <input type="text" placeholder="请输入所属行业">
+                </div>
+                <div class="base-input-wrap the-last">
+                  <img class="required" src="./imgs/star.png" alt="">
+                  <input type="text" placeholder="请输入您的手机号">
+                  <div class="phone-warn">请输入正确的手机号</div>
+                </div>
+                <button class="base-btn dialog-submit">查询能否注册</button>
+                <div class="privacy flex-cc">
+                  <div class="check-block flex-cc">
+                    <img class="pop" src="./imgs/pop.png" alt="">
+                    <img src="./imgs/success.png" alt="">
+                  </div>
+                  <div class="explain">我已阅读并接受中细软集团<span class="book">《隐私权政策》</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

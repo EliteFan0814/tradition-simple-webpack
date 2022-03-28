@@ -12,6 +12,7 @@ body {
   font-stretch: normal;
   line-height: 1;
   letter-spacing: 0px;
+  background-color: #ededed;
   // 基础按钮样式
   @mixin base-btn {
     font-size: 12px;
@@ -56,17 +57,316 @@ body {
     transform: translate(-50%, 0%);
     background-color: #ffffff;
   }
+  // 基础背景图样式
+  @mixin base-bg {
+    background-image: url(../imgs/bg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
   .base-btn {
     @include base-btn;
   }
+  .base-title-head {
+    margin-bottom: 19.5px;
+    .title-up {
+      margin-bottom: 5px;
+      .beafter {
+        width: 22px;
+        height: 10.5px;
+      }
+      .beafter-span {
+        padding: 0 10.5px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #ffffff;
+      }
+      .after {
+        transform: rotate(180deg);
+      }
+    }
+    .sub {
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: 0px;
+      color: #8da0e9;
+      opacity: 0.8;
+    }
+  }
+  .base-input-wrap {
+    position: relative;
+    box-sizing: border-box;
+    width: 290px;
+    border: solid 1px #afafaf;
+    padding: 13px 9px;
+    border-radius: 5px;
+    margin-bottom: 14.5px;
+    .required {
+      position: absolute;
+      top: 50%;
+      left: -15px;
+      transform: translateY(-50%);
+    }
+    input {
+      @include base-input;
+    }
+    .phone-warn {
+      position: absolute;
+      bottom: -18px;
+      color: #ed4d4a;
+      font-size: 14px;
+    }
+    .textarea {
+      border: none;
+      outline: none;
+      box-shadow: none;
+      appearance: none;
+      resize: none;
+      &::placeholder {
+        font-family: MicrosoftYaHei;
+        font-size: 14px;
+        letter-spacing: 0px;
+        color: #bbbbbb;
+      }
+    }
+  }
+  .privacy {
+    .check-block {
+      position: relative;
+      width: 16px;
+      height: 16.5px;
+      border-radius: 2px;
+      border: solid 0.5px #ababab;
+      margin-right: 5px;
+      img {
+        width: 11px;
+        height: 8.5px;
+      }
+      .pop {
+        position: absolute;
+        width: 132px;
+        height: 20px;
+        top: -24px;
+        left: -7px;
+      }
+    }
+    .explain {
+      font-size: 12px;
+      color: #666666;
+      .book {
+        color: #f32c00;
+        text-decoration: underline;
+      }
+    }
+  }
+  .dialog-submit {
+    font-size: 18px;
+    width: 290px;
+    border-radius: 26px;
+    margin-bottom: 15px;
+    background-image: linear-gradient(-35deg, #e52f40 0%, #ff4758 100%), linear-gradient(#ff1748, #ff1748);
+    background-blend-mode: normal, normal;
+    &:active {
+      background-image: linear-gradient(-35deg, #f58da5 0%, #f88b94 100%), linear-gradient(#ffffff, #ffffff);
+      border: solid 0.5px #f58da5;
+    }
+  }
   // 搜索
   .search-wrap {
+    @include base-bg;
+    padding-top: 28px;
+    .first-slogan {
+      text-align: center;
+      padding-bottom: 27px;
+      img {
+        width: 284.5px;
+      }
+    }
     .search-box {
+      padding: 0 22.5px;
+      padding-bottom: 36px;
       .input-wrap {
+        box-sizing: border-box;
+        padding: 11px 0px 11px 2.5px;
+        background-color: #ffffff;
+        border-radius: 5px 0 0 5px;
+        // width: 225.5px;
+        width: 185.5px;
         input {
           @include base-input;
+          width: 100%;
+          &::placeholder {
+            font-family: MicrosoftYaHei;
+            font-size: 14px;
+            letter-spacing: 0px;
+            color: #bbbbbb;
+          }
         }
       }
+      .search-btn {
+        width: 105px;
+        font-size: 14px;
+        line-height: 17px;
+        padding: 10px 2.5px;
+        border-radius: 0px 5px 5px 0px;
+      }
+    }
+    .quick-wrap {
+      @include base-bg;
+      position: relative;
+      margin: 0 auto;
+      width: 349px;
+      height: 299px;
+      background-color: #6560ae;
+      border-radius: 16px;
+      background-image: url(../imgs/quick0.png);
+      background-size: 349px 299px;
+      .exchange-bg {
+        position: absolute;
+        top: 0px;
+        width: 349px;
+        height: 299px;
+      }
+      .quick-title {
+        .q-title {
+          padding-top: 16px;
+          text-align: center;
+          width: 33.33%;
+          font-size: 12px;
+          color: #ffffff;
+        }
+        .q-title-active {
+          font-weight: bold;
+          color: #fd4649;
+        }
+      }
+      .category {
+        // border: 1px solid red;
+        padding: 23.5px 11.5px 0;
+        .slide {
+          flex-shrink: 0;
+          border-left: 1px solid #dadada;
+          border-right: 1px solid #dadada;
+          width: 91px;
+          height: 235px;
+          overflow-y: auto;
+          li {
+            box-sizing: border-box;
+            width: 91px;
+            height: 43.5px;
+            background-color: #f4f4f4;
+            border-bottom: solid 1px #dadada;
+            padding: 16px 0;
+            text-align: center;
+          }
+          .active-li {
+            color: #ff4859;
+          }
+        }
+        .slide-content {
+          .industry-main {
+            // display: none;
+            padding: 20px 0 0 10px;
+            .core {
+              h3 {
+                padding-left: 20px;
+                padding-bottom: 15px;
+                color: #333333;
+                font-weight: bold;
+                i {
+                  display: inline-block;
+                  width: 3px;
+                  height: 3.5px;
+                  background-color: #ffa145;
+                  border-radius: 50%;
+                  margin-right: 5px;
+                }
+              }
+              .core-content {
+                flex-wrap: wrap;
+                justify-content: space-around;
+                .c-c-item {
+                  width: 50%;
+                  margin-bottom: 12.5px;
+                  color: #999999;
+                  .img-wrap {
+                    margin-right: 5.5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 13px;
+                    height: 13px;
+                    img {
+                      display: block;
+                      max-width: 13px;
+                      max-height: 13px;
+                    }
+                  }
+                }
+              }
+              .core-item {
+                display: none;
+              }
+              .core-item-active {
+                display: flex;
+              }
+              .relevance-item {
+                display: none;
+              }
+              .relevance-item-active {
+                display: flex;
+              }
+            }
+            .core-first {
+              margin-bottom: 19px;
+            }
+            .btn-wrap {
+              padding-top: 20px;
+              text-align: center;
+            }
+          }
+          .industry-other {
+            display: none;
+            padding: 20px 0 0 10px;
+            h3 {
+              text-align: center;
+              padding-bottom: 14.5px;
+              font-size: 14px;
+              color: #333333;
+              font-weight: bold;
+            }
+            .other-form {
+              margin-left: 15px;
+              .base-input-wrap {
+                width: 206px;
+                padding: 10px 0 10px 5px;
+                border: 1px solid red;
+              }
+              .the-last {
+                margin-bottom: 22.5px;
+              }
+              .dialog-submit {
+                width: 205px;
+                font-size: 12px;
+              }
+              .privacy {
+                .explain {
+                  // font-size: 11px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .quick0 {
+      background-image: url(../imgs/quick0.png);
+    }
+    .quick1 {
+      background-image: url(../imgs/quick1.png);
+    }
+    .quick2 {
+      background-image: url(../imgs/quick2.png);
     }
   }
   // 弹窗蒙版
@@ -125,86 +425,9 @@ body {
           display: inline-block;
         }
       }
-      .base-input-wrap {
-        position: relative;
-        box-sizing: border-box;
-        width: 290px;
-        border: solid 1px #afafaf;
-        padding: 13px 9px;
-        border-radius: 5px;
-        margin-bottom: 14.5px;
-        .required {
-          position: absolute;
-          top: 50%;
-          left: -15px;
-          transform: translateY(-50%);
-        }
-        input {
-          @include base-input;
-        }
-        .phone-warn {
-          position: absolute;
-          bottom: -18px;
-          color: #ed4d4a;
-          font-size: 14px;
-        }
-        .textarea {
-          border: none;
-          outline: none;
-          box-shadow: none;
-          appearance: none;
-          resize: none;
-          &::placeholder {
-            font-family: MicrosoftYaHei;
-            font-size: 14px;
-            letter-spacing: 0px;
-            color: #bbbbbb;
-          }
-        }
-      }
+
       .the-last {
         margin-bottom: 29.5px;
-      }
-      .dialog-submit {
-        font-size: 18px;
-        width: 290px;
-        border-radius: 26px;
-        margin-bottom: 15px;
-        background-image: linear-gradient(-35deg, #e52f40 0%, #ff4758 100%), linear-gradient(#ff1748, #ff1748);
-        background-blend-mode: normal, normal;
-        &:active {
-          background-image: linear-gradient(-35deg, #f58da5 0%, #f88b94 100%), linear-gradient(#ffffff, #ffffff);
-          border: solid 0.5px #f58da5;
-        }
-      }
-      .privacy {
-        .check-block {
-          position: relative;
-          width: 16px;
-          height: 16.5px;
-          border-radius: 2px;
-          border: solid 0.5px #ababab;
-          margin-right: 5px;
-          img {
-            width: 11px;
-            height: 8.5px;
-          }
-          .pop {
-            position: absolute;
-            width: 132px;
-            height: 20px;
-            top: -24px;
-            left: -7px;
-          }
-        }
-        .explain {
-          font-size: 12px;
-          color: #666666;
-          .book {
-            color: #f32c00;
-            text-decoration: underline;
-          }
-        }
       }
     }
     .success-dialog {
