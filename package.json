@@ -20,7 +20,8 @@
   "homepage": "https://github.com/EliteFan0814/tradition-simple-webpack#readme",
   "dependencies": {
     "amfe-flexible": "^2.2.1",
-    "jquery": "^1.7.2"
+    "jquery": "^1.7.2",
+    "swiper": "^8.0.7"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^10.1.0",

@@ -11,14 +11,15 @@
   <meta name="description"
     content="中细软创新科技服务平台产业链由IP确权、IP交易、IP管理、IP金融四大板块构成，服务项目多达3000余种。致力于通过网络科技等手段，为全球科技创新提供系统的解决方案与信息服务。">
   <title>中细软集团</title>
+  <link rel="stylesheet" href="./library/swiper-bundle-7.4.1.min.css">
+  <script src="./library/swiper-bundle-7.4.1.min.js"></script>
   <!-- <script src="./library/jquery1.7.2.min.js"></script> -->
   <script src="./library/jquery1.7.2.min.js"></script>
 </head>
 
 <body>
   <div class="fpc-wrapper">
-    <!-- <button class="base-btn ">获取详细注册方案</button>
-    <button class="base-btn sss">咨询办理</button> -->
+    <!-- 快捷工具 -->
     <div class="search-wrap">
       <div class="first-slogan"><img src="./imgs/first-slogan.png" alt=""></div>
       <div class="search-box flex-cc">
@@ -43,136 +44,351 @@
           <span class="q-title" data-index="2">购买现成商标</span>
         </div>
         <!-- 行业分类查询 -->
-        <div class="category flex">
-          <ul class="slide industry-list">
-            <li class="active-li" data-index="0">餐饮</li>
-            <li data-index="1">食品</li>
-            <li data-index="2">服饰</li>
-            <li data-index="3">家居</li>
-            <li data-index="4">化妆品</li>
-            <li data-index="5">旅游</li>
-            <li data-index="6">传媒</li>
-            <li data-index="7">摄影</li>
-            <li data-index="8">汽车</li>
-            <li data-index="9">化工</li>
-            <li data-index="10">医疗</li>
-            <li data-index="11">母婴</li>
-            <li data-index="12">珠宝</li>
-            <li data-index="13">宠物</li>
-            <li data-index="14">互联网/IT</li>
-            <li data-index="15">乐器</li>
-            <li data-index="16">健身</li>
-            <li data-index="17">地产</li>
-            <li data-index="18">建材</li>
-            <li data-index="-1">其它</li>
-          </ul>
-          <div class="slide-content">
-            <div class="industry-main">
-              <!-- 核心注册类别 -->
-              <div class="core core-first">
-                <h3 class="flex-c"><i class="dot"></i>核心注册类别</h3>
-                <!-- 餐饮 -->
-                <div class="core-content flex core-item core-item-active" data-index="0">
-                  <div class="c-c-item flex-c">
-                    <div class="img-wrap "><img src="./imgs/43.png" alt=""></div> <span>43类-餐饮住宿</span>
+        <div class="jq-quick-c jq-quick-c-active" data-index="0">
+          <div class="category flex">
+            <ul class="slide industry-list">
+              <li class="active-li" data-index="0">餐饮</li>
+              <li data-index="1">食品</li>
+              <li data-index="2">服饰</li>
+              <li data-index="3">家居</li>
+              <li data-index="4">化妆品</li>
+              <li data-index="5">旅游</li>
+              <li data-index="6">传媒</li>
+              <li data-index="7">摄影</li>
+              <li data-index="8">汽车</li>
+              <li data-index="9">化工</li>
+              <li data-index="10">医疗</li>
+              <li data-index="11">母婴</li>
+              <li data-index="12">珠宝</li>
+              <li data-index="13">宠物</li>
+              <li data-index="14">互联网/IT</li>
+              <li data-index="15">乐器</li>
+              <li data-index="16">健身</li>
+              <li data-index="17">地产</li>
+              <li data-index="18">建材</li>
+              <li data-index="-1">其它</li>
+            </ul>
+            <div class="slide-content">
+              <div class="industry-main">
+                <!-- 核心注册类别 -->
+                <div class="core core-first">
+                  <h3 class="flex-c"><i class="dot"></i>核心注册类别</h3>
+                  <!-- 餐饮 -->
+                  <div class="core-content flex core-item core-item-active" data-index="0">
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/43.png" alt=""></div> <span>43类-餐饮住宿</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/35.png" alt=""></div> <span>35类-广告销售</span>
+                    </div>
                   </div>
-                  <div class="c-c-item flex-c">
-                    <div class="img-wrap "><img src="./imgs/35.png" alt=""></div> <span>35类-广告销售</span>
+                  <!-- 食品 -->
+                  <div class="core-content flex core-item" data-index="1">
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/29.png" alt=""></div> <span>29类-食品</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/30.png" alt=""></div> <span>30类-方便食品</span>
+                    </div>
+                  </div>
+                  <!-- 服装 -->
+                  <div class="core-content flex core-item" data-index="2">
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/18.png" alt=""></div> <span>18类-箱包皮具</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/25.png" alt=""></div> <span>25类-服饰鞋帽</span>
+                    </div>
+                  </div>
+                  <!-- 家居 -->
+                  <div class="core-content flex core-item" data-index="3">
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/11.png" alt=""></div> <span>11类-灯具空调</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/19.png" alt=""></div> <span>19类-地板门窗</span>
+                    </div>
+                  </div>
+                  <!-- 化妆品 -->
+                  <div class="core-content flex core-item" data-index="4">
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/03.png" alt=""></div> <span>03类-日化用品</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/21.png" alt=""></div> <span>21类-化妆用具</span>
+                    </div>
                   </div>
                 </div>
-                <!-- 食品 -->
-                <div class="core-content flex core-item" data-index="1">
-                  <div class="c-c-item flex-c">
-                    <div class="img-wrap "><img src="./imgs/29.png" alt=""></div> <span>29类-食品</span>
+                <!-- 关联注册类别 -->
+                <div class="core">
+                  <h3 class="flex-c"><i class="dot"></i>关联注册类别</h3>
+                  <div class="core-content flex relevance-item relevance-item-active" data-index="0">
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/07.png" alt=""></div> <span>07类-厨房电器</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/08.png" alt=""></div> <span>08类-餐具</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/29.png" alt=""></div> <span>29类-肉类干果</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/30.png" alt=""></div> <span>30类-方便食品</span>
+                    </div>
                   </div>
-                  <div class="c-c-item flex-c">
-                    <div class="img-wrap "><img src="./imgs/30.png" alt=""></div> <span>30类-方便食品</span>
+                  <div class="core-content flex relevance-item" data-index="1">
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/16.png" alt=""></div> <span>16类-食品包装</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/35.png" alt=""></div> <span>35类-广告销售</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/40.png" alt=""></div> <span>40类-食品加工</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/43.png" alt=""></div> <span>43类-餐饮住宿</span>
+                    </div>
                   </div>
                 </div>
-                <!-- 服装 -->
-                <div class="core-content flex core-item" data-index="2">
-                  <div class="c-c-item flex-c">
-                    <div class="img-wrap "><img src="./imgs/18.png" alt=""></div> <span>18类-箱包皮具</span>
-                  </div>
-                  <div class="c-c-item flex-c">
-                    <div class="img-wrap "><img src="./imgs/25.png" alt=""></div> <span>25类-服饰鞋帽</span>
-                  </div>
-                </div>
-                <!-- 家居 -->
-                <div class="core-content flex core-item" data-index="3">
-                  <div class="c-c-item flex-c">
-                    <div class="img-wrap "><img src="./imgs/11.png" alt=""></div> <span>11类-灯具空调</span>
-                  </div>
-                  <div class="c-c-item flex-c">
-                    <div class="img-wrap "><img src="./imgs/19.png" alt=""></div> <span>19类-地板门窗</span>
-                  </div>
-                </div>
-                <!-- 化妆品 -->
-                <div class="core-content flex core-item" data-index="4">
-                  <div class="c-c-item flex-c">
-                    <div class="img-wrap "><img src="./imgs/03.png" alt=""></div> <span>03类-日化用品</span>
-                  </div>
-                  <div class="c-c-item flex-c">
-                    <div class="img-wrap "><img src="./imgs/21.png" alt=""></div> <span>21类-化妆用具</span>
-                  </div>
+                <div class="btn-wrap">
+                  <button class="base-btn">获取详细注册方案</button>
                 </div>
               </div>
-              <!-- 关联注册类别 -->
-              <div class="core">
-                <h3 class="flex-c"><i class="dot"></i>关联注册类别</h3>
-                <div class="core-content flex relevance-item relevance-item-active" data-index="0">
-                  <div class="c-c-item flex-c">
-                    <div class="img-wrap "><img src="./imgs/07.png" alt=""></div> <span>07类-厨房电器</span>
+              <div class="industry-other">
+                <h3>更多行业注册方案咨询</h3>
+                <div class="other-form">
+                  <div class="base-input-wrap">
+                    <input type="text" placeholder="请输入所属行业">
                   </div>
-                  <div class="c-c-item flex-c">
-                    <div class="img-wrap "><img src="./imgs/08.png" alt=""></div> <span>08类-餐具</span>
+                  <div class="base-input-wrap the-last">
+                    <img class="required" src="./imgs/star.png" alt="">
+                    <input type="text" placeholder="请输入您的手机号">
+                    <div class="phone-warn">请输入正确的手机号</div>
                   </div>
-                  <div class="c-c-item flex-c">
-                    <div class="img-wrap "><img src="./imgs/29.png" alt=""></div> <span>29类-肉类干果</span>
-                  </div>
-                  <div class="c-c-item flex-c">
-                    <div class="img-wrap "><img src="./imgs/30.png" alt=""></div> <span>30类-方便食品</span>
-                  </div>
-                </div>
-                <div class="core-content flex relevance-item" data-index="1">
-                  <div class="c-c-item flex-c">
-                    <div class="img-wrap "><img src="./imgs/16.png" alt=""></div> <span>16类-食品包装</span>
-                  </div>
-                  <div class="c-c-item flex-c">
-                    <div class="img-wrap "><img src="./imgs/35.png" alt=""></div> <span>35类-广告销售</span>
-                  </div>
-                  <div class="c-c-item flex-c">
-                    <div class="img-wrap "><img src="./imgs/40.png" alt=""></div> <span>40类-食品加工</span>
-                  </div>
-                  <div class="c-c-item flex-c">
-                    <div class="img-wrap "><img src="./imgs/43.png" alt=""></div> <span>43类-餐饮住宿</span>
+                  <button class="base-btn dialog-submit">查询能否注册</button>
+                  <div class="privacy flex-cc">
+                    <div class="check-block flex-cc">
+                      <img class="pop" src="./imgs/pop.png" alt="">
+                      <img src="./imgs/success.png" alt="">
+                    </div>
+                    <div class="explain">我已阅读并接受中细软集团<span class="book">《隐私权政策》</span></div>
                   </div>
                 </div>
-              </div>
-              <div class="btn-wrap">
-                <button class="base-btn">获取详细注册方案</button>
               </div>
             </div>
-            <div class="industry-other">
-              <h3>更多行业注册方案咨询</h3>
-              <div class="other-form">
-                <div class="base-input-wrap">
-                  <input type="text" placeholder="请输入所属行业">
-                </div>
-                <div class="base-input-wrap the-last">
-                  <img class="required" src="./imgs/star.png" alt="">
-                  <input type="text" placeholder="请输入您的手机号">
-                  <div class="phone-warn">请输入正确的手机号</div>
-                </div>
-                <button class="base-btn dialog-submit">查询能否注册</button>
-                <div class="privacy flex-cc">
-                  <div class="check-block flex-cc">
-                    <img class="pop" src="./imgs/pop.png" alt="">
-                    <img src="./imgs/success.png" alt="">
-                  </div>
-                  <div class="explain">我已阅读并接受中细软集团<span class="book">《隐私权政策》</span></div>
-                </div>
+          </div>
+        </div>
+        <!-- 商标近似查询 -->
+        <div class="jq-quick-c" data-index="1">
+          <div class="logolike">
+            <div class="logolike-c flex">
+              <img src="./imgs/logolike0.png" alt="">
+              <div class="l-c-text">
+                <h3>近似查询结果</h3>
+                <p>5000万+商标数据，为您提供近似<br>商标查询结果，降低注册风险。</p>
               </div>
+            </div>
+            <div class="logolike-c flex l-c-last">
+              <img src="./imgs/logolike1.png" alt="">
+              <div class="l-c-text">
+                <h3>可注册类别建议</h3>
+                <p>通过大数据分析，为您提供可注册<br>类别的初步建议，有效提高注册成功率！</p>
+              </div>
+            </div>
+            <div class="flex-cc"><button class="base-btn">免费查询能否注册</button></div>
+          </div>
+        </div>
+        <!-- 购买现成商标 -->
+        <div class="jq-quick-c" data-index="2">
+          <div class="buylogo">
+            <img src="./imgs/buynow.png" alt="">
+            <span class="span0 buy-span">什么样的商标适合我？</span>
+            <span class="span1 buy-span">购买商标应该注意啥？</span>
+            <span class="span2 buy-span">找商标太麻烦，<br>平时太忙，懒得找！</span>
+            <span class="span3 buy-span">购买商标，<br>怎么办理过户手续？</span>
+            <span class="span4 buy-span">拓展海外业务，<br>商标有啥特殊要求？</span>
+            <span class="span5 buy-span">商标使用年限多久？<br> 到期怎么办？</span>
+            <div class="flex-cc"><button class="base-btn">免费查询能否注册</button></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- 爆款推荐 -->
+    <div class="recommend-wrap">
+      <!-- title -->
+      <div class="base-title-head">
+        <div class="title-up flex-cc">
+          <img class="beafter before" src="./imgs/beafterblue.png" alt="">
+          <span class="beafter-span">爆款推荐</span>
+          <img class="beafter after" src="./imgs/beafterblue.png" alt="">
+        </div>
+        <div class="sub">注册方式随心选</div>
+      </div>
+      <div class="recommend-list">
+        <div class="reco-list">
+          <div class="reco-item flex-cc">
+            <img src="./imgs/reco0.png" alt="">
+            <div class="reco-content">
+              <h3>商标极速注册</h3>
+              <p>商标注册＋【59分钟】极速服务通道</p>
+            </div>
+            <button class="base-btn">咨询办理</button>
+          </div>
+          <div class="reco-item flex-cc">
+            <img src="./imgs/reco1.png" alt="">
+            <div class="reco-content">
+              <h3>美颜商标注册</h3>
+              <p>商标注册＋LOGO设计</p>
+            </div>
+            <button class="base-btn">咨询办理</button>
+          </div>
+          <div class="reco-item flex-cc">
+            <img src="./imgs/reco2.png" alt="">
+            <div class="reco-content">
+              <h3>IP卫士注册</h3>
+              <p>商标注册＋法律保护</p>
+            </div>
+            <button class="base-btn">咨询办理</button>
+          </div>
+          <div class="reco-item flex-cc">
+            <img src="./imgs/reco3.png" alt="">
+            <div class="reco-content">
+              <h3>普通商标注册</h3>
+              <p>智能＋人工双重排查近似</p>
+            </div>
+            <button class="base-btn">咨询办理</button>
+          </div>
+          <div class="reco-item flex-cc">
+            <img src="./imgs/reco4.png" alt="">
+            <div class="reco-content">
+              <h3>闲置商标交易</h3>
+              <p>百万商标资源随心选,即买即用</p>
+            </div>
+            <button class="base-btn">咨询办理</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 专家团队 -->
+    <div class="professor-wrap">
+      <!-- title -->
+      <div class="base-title-head">
+        <div class="title-up flex-cc">
+          <img class="beafter before" src="./imgs/beafter.png" alt="">
+          <span class="beafter-span">专家团队</span>
+          <img class="beafter after" src="./imgs/beafter.png" alt="">
+        </div>
+        <div class="sub">1000+专业团队，助您顺利获得商标</div>
+      </div>
+      <div class="pro-swiper-wrap">
+        <div class="swiper-professor">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide flex">
+              <img class="people" src="./imgs/people0.png" alt="">
+              <div class="people-content">
+                <h3 class="flex-c"><span class="name">彭李悦</span><span class="pinyin">PENG LI YUE</span></h3>
+                <h4>擅长领域：</h4>
+                <div class="good-list flex">
+                  <div class="good-item flex"><img src="./imgs/bingo.png" alt=""><span>商标注册</span></div>
+                  <div class="good-item flex"><img src="./imgs/bingo.png" alt=""><span>国际注册</span></div>
+                  <div class="good-item flex"><img src="./imgs/bingo.png" alt=""><span>商标交易</span></div>
+                </div>
+                <button class="base-btn">在线咨询</button>
+              </div>
+            </div>
+            <div class="swiper-slide flex">
+              <img class="people" src="./imgs/people1.png" alt="">
+              <div class="people-content">
+                <h3 class="flex-c"><span class="name">赵鲁光</span><span class="pinyin">ZHAO LU GUANG</span></h3>
+                <h4>擅长领域：</h4>
+                <div class="good-list flex">
+                  <div class="good-item flex"><img src="./imgs/bingo.png" alt=""><span>商标注册</span></div>
+                  <div class="good-item flex"><img src="./imgs/bingo.png" alt=""><span>商标异议</span></div>
+                  <div class="good-item flex"><img src="./imgs/bingo.png" alt=""><span>商标无效宣告</span></div>
+                  <div class="good-item flex"><img src="./imgs/bingo.png" alt=""><span>撤三答辩</span></div>
+                </div>
+                <button class="base-btn">在线咨询</button>
+              </div>
+            </div>
+            <div class="swiper-slide flex">
+              <img class="people" src="./imgs/people2.png" alt="">
+              <div class="people-content">
+                <h3 class="flex-c"><span class="name">秦鑫鑫</span><span class="pinyin">QIN XIN XIN</span></h3>
+                <h4>擅长领域：</h4>
+                <div class="good-list flex">
+                  <div class="good-item flex"><img src="./imgs/bingo.png" alt=""><span>商标注册</span></div>
+                  <div class="good-item flex"><img src="./imgs/bingo.png" alt=""><span>撤三答辩</span></div>
+                  <div class="good-item flex"><img src="./imgs/bingo.png" alt=""><span>商标驳回复审</span></div>
+                </div>
+                <button class="base-btn">在线咨询</button>
+              </div>
+            </div>
+            <div class="swiper-slide flex">
+              <img class="people" src="./imgs/people3.png" alt="">
+              <div class="people-content">
+                <h3 class="flex-c"><span class="name">崔晓庆</span><span class="pinyin">CUN XIAO QING</span></h3>
+                <h4>擅长领域：</h4>
+                <div class="good-list flex">
+                  <div class="good-item flex"><img src="./imgs/bingo.png" alt=""><span>商标注册</span></div>
+                  <div class="good-item flex"><img src="./imgs/bingo.png" alt=""><span>商标疑难案件</span></div>
+                </div>
+                <button class="base-btn">在线咨询</button>
+              </div>
+            </div>
+            <div class="swiper-slide flex">
+              <img class="people" src="./imgs/people4.png" alt="">
+              <div class="people-content">
+                <h3 class="flex-c"><span class="name">张彩倩</span><span class="pinyin">ZHANG CAI QIAN</span></h3>
+                <h4>擅长领域：</h4>
+                <div class="good-list flex">
+                  <div class="good-item flex"><img src="./imgs/bingo.png" alt=""><span>国内外商标申请</span></div>
+                  <div class="good-item flex"><img src="./imgs/bingo.png" alt=""><span>国内外商标交易</span></div>
+                </div>
+                <button class="base-btn">在线咨询</button>
+              </div>
+            </div>
+            <div class="swiper-slide flex">
+              <img class="people" src="./imgs/people5.png" alt="">
+              <div class="people-content">
+                <h3 class="flex-c"><span class="name">任文彪</span><span class="pinyin">REN WEN BIAO</span></h3>
+                <h4>擅长领域：</h4>
+                <div class="good-list flex">
+                  <div class="good-item flex"><img src="./imgs/bingo.png" alt=""><span>国内外商标确权</span></div>
+                  <div class="good-item flex"><img src="./imgs/bingo.png" alt=""><span>国内外商标维权</span></div>
+                </div>
+                <button class="base-btn">在线咨询</button>
+              </div>
+            </div>
+          </div>
+          <!-- 如果需要分页器 -->
+          <div class="professor-pagination"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 常见问题 -->
+    <div class="problem-wrap">
+      <!-- title -->
+      <div class="base-title-head">
+        <div class="title-up flex-cc">
+          <img class="beafter before" src="./imgs/beafterblue.png" alt="">
+          <span class="beafter-span">常见问题</span>
+          <img class="beafter after" src="./imgs/beafterblue.png" alt="">
+        </div>
+        <div class="sub">商标注册问题多，毫无头绪怎么办</div>
+      </div>
+      <div class="problem-swiper-wrap">
+        <div class="swiper-problem">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              1
+            </div>
+            <div class="swiper-slide">
+              1
+            </div>
+            <div class="swiper-slide">
+              1
             </div>
           </div>
         </div>
