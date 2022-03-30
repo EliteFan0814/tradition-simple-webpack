@@ -27,6 +27,26 @@ body {
       border: solid 0.5px #f58da5;
     }
   }
+  @mixin base-btn2 {
+    font-size: 12px;
+    color: #fa4253;
+    border-radius: 13px;
+    border: solid 1px #e52f40;
+    background-color: transparent;
+    padding: 4px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      margin-left: 5px;
+      display: block;
+      width: 10px;
+      height: 5.5px;
+    }
+    &:active {
+      font-weight: bold;
+    }
+  }
   // 基础输入框样式
   @mixin base-input {
     font-size: 14px;
@@ -66,6 +86,9 @@ body {
   }
   .base-btn {
     @include base-btn;
+  }
+  .base-btn2 {
+    @include base-btn2;
   }
   .base-title-head {
     margin-bottom: 19.5px;
@@ -509,9 +532,7 @@ body {
     padding: 35px 0 10px;
     .pro-swiper-wrap {
       .swiper-professor {
-        // width: 375px;
         overflow: hidden;
-        // height: 300px;
         .professor-unactive {
           display: inline-block;
           margin: 0 2.5px;
@@ -585,6 +606,7 @@ body {
     @include base-bg;
     background-image: url(../imgs/problembg.jpg);
     padding-top: 35px;
+    padding-bottom: 25px;
     .base-title-head {
       .beafter-span {
         color: #333333;
@@ -594,7 +616,326 @@ body {
       }
     }
     .problem-swiper-wrap {
-      overflow: hidden;
+      margin-bottom: 8.5px;
+      .swiper-problem {
+        overflow: hidden;
+        .problem-unactive {
+          display: inline-block;
+          margin: 0 2.5px;
+          width: 7.5px;
+          height: 3px;
+          background-color: #cfcfcf;
+          border-radius: 1.5px;
+        }
+        .problem-active {
+          display: inline-block;
+          margin: 0 2.5px;
+          width: 7.5px;
+          height: 3px;
+          background-color: #f23b4c;
+          border-radius: 1.5px;
+        }
+        .swiper-wrapper {
+          .swiper-slide {
+            .problem-item {
+              .ask-wrap {
+                align-items: flex-start;
+                justify-content: center;
+                img {
+                  width: 45px;
+                  margin-right: 10px;
+                }
+                .problem-ask {
+                  position: relative;
+                  margin-bottom: 19px;
+                  &::before {
+                    position: absolute;
+                    top: 18px;
+                    left: -10px;
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border: 5px solid;
+                    border-color: transparent #fff transparent transparent;
+                  }
+                  width: 268.5px;
+                  background-color: #ffffff;
+                  border-radius: 10px;
+                  padding: 14px;
+                  .fpc-wen {
+                    margin-bottom: 11px;
+                    font-weight: bold;
+                    font-size: 13px;
+                    color: #4b51dc;
+                  }
+                  .fpc-wen-t {
+                    line-height: 18px;
+                    color: #666666;
+                  }
+                }
+              }
+              .answer-wrap {
+                align-items: flex-start;
+                justify-content: center;
+                margin-bottom: 10.5px;
+                img {
+                  width: 45px;
+                  margin-left: 10px;
+                }
+                .problem-answer {
+                  position: relative;
+                  &::before {
+                    position: absolute;
+                    top: 18px;
+                    right: -10px;
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border: 5px solid;
+                    border-color: transparent transparent transparent #fff;
+                  }
+                  width: 268.5px;
+                  background-color: #ffffff;
+                  border-radius: 10px;
+                  padding: 14px;
+                  .fpc-da {
+                    margin-bottom: 11px;
+                    font-weight: bold;
+                    font-size: 13px;
+                    color: #fd4649;
+                  }
+                  .fpc-da-t {
+                    line-height: 18px;
+                    color: #666666;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .problem-pagination {
+          text-align: center;
+        }
+      }
+    }
+  }
+  // 推荐服务
+  .serve-wrap {
+    @include base-bg;
+    background-image: url(../imgs/recommendbg.png);
+    background-size: 100% auto;
+    background-position: top;
+    padding-top: 34.5px;
+    margin-bottom: 40px;
+    .serve-tabs {
+      .s-tab-item {
+        padding: 0 13px;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.7);
+        .s-text {
+          padding-bottom: 10px;
+        }
+        .s-img-wrap {
+          width: 32px;
+          height: 9px;
+          img {
+            display: none;
+            width: 32px;
+            height: 9px;
+          }
+        }
+      }
+      .s-tab-active {
+        color: #ff5767;
+        font-weight: bold;
+        .s-img-wrap {
+          img {
+            display: block;
+          }
+        }
+      }
+    }
+    .serve-content {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding-top: 20px;
+      width: 351px;
+      margin: 0 auto;
+      .info-change {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        .serve-item {
+          // border: 1px solid red;
+          box-sizing: border-box;
+          width: 50%;
+          position: relative;
+          margin-bottom: 11px;
+          // border: 1px solid red;
+          .s-i-bg {
+            display: block;
+            margin: 0 auto;
+            width: 154px;
+          }
+          .serve-c-wrap {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            .serve-title {
+              font-weight: bold;
+              font-size: 14px;
+              color: #ffffff;
+              padding-top: 7px;
+            }
+            .serve-text {
+              text-align: center;
+              color: #999999;
+              line-height: 16px;
+              padding: 20px 0 12px;
+            }
+          }
+        }
+      }
+      .logo-change {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding-bottom: 20px;
+        .logo-change-wrap {
+          overflow: hidden;
+          .swiper-logo {
+            .logo-unactive {
+              display: inline-block;
+              margin: 0 2.5px;
+              width: 12.5px;
+              height: 3px;
+              background-color: #cfcfcf;
+              border-radius: 1.5px;
+            }
+            .logo-active {
+              display: inline-block;
+              margin: 0 2.5px;
+              width: 12.5px;
+              height: 3px;
+              background-color: #f23b4c;
+              border-radius: 1.5px;
+            }
+            .logo-pagination {
+              padding-top: 5px;
+              text-align: center;
+            }
+            .swiper-slide {
+              .logo-item-wrap {
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                .flex-wrap {
+                  width: 33.33%;
+                  margin-bottom: 7px;
+                  .logo-item {
+                    margin: 0 auto;
+                    width: 95px;
+                    padding: 5px 5px 10px;
+                    background-color: #f7f7ff;
+                    border-radius: 4px;
+                    border: solid 0.5px #e5e5fc;
+                    .img-wrap {
+                      margin-bottom: 11px;
+                      padding-bottom: 7px;
+                      border-bottom: 1px solid #e5e5fc;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      width: 100%;
+                      height: 34.5px;
+                      img {
+                        display: block;
+                        max-width: 100%;
+                        max-height: 34.5px;
+                      }
+                    }
+                    p {
+                      margin-bottom: 8px;
+                      text-align: center;
+                      color: #666666;
+                    }
+                    .base-btn2 {
+                      padding: 2px 12px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .serve-c-active {
+        display: flex;
+      }
+    }
+  }
+  // 我们的客户
+  .customer-wrap {
+    padding: 35px 0;
+    background-color: #fff;
+    .base-title-head {
+      .beafter-span {
+        color: #333333;
+      }
+      .sub {
+        color: #999999;
+      }
+    }
+    .customer-list {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin: 0 auto 23.5px;
+      width: 352.5px;
+      background-color: #f8f8f8;
+      border-radius: 2px;
+      border: solid 0.5px #e2e2e2;
+      border-right: none;
+      border-bottom: none;
+      .customer-item {
+        border-right: solid 0.5px #e2e2e2;
+        border-bottom: solid 0.5px #e2e2e2;
+        box-sizing: border-box;
+        width: 33.33%;
+        padding: 15px 10px;
+        .img-wrap {
+          box-sizing: border-box;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 53px;
+          img {
+            display: block;
+            max-width: 100%;
+            max-height: 53px;
+          }
+        }
+      }
+    }
+  }
+  // 结尾
+  .company{
+    color: #999999;
+    text-align: center;
+    p{
+      padding-bottom: 10px;
+      .slide{
+        display: block;
+        padding: 0 5px;
+      }
+      img{
+        width: 9px;
+        display: block;
+        margin-right: 2px;
+      }
     }
   }
   // 弹窗蒙版
