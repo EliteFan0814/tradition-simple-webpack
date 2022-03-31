@@ -255,6 +255,7 @@ body {
     }
     .quick-wrap {
       @include base-bg;
+      // box-shadow: 0px -39px 58px -19px rgb(240, 240, 240) inset;
       position: relative;
       margin: 0 auto;
       width: 349px;
@@ -929,7 +930,7 @@ body {
   }
   // 我们的客户
   .customer-wrap {
-    padding: 35px 0;
+    padding: 35px 0 60px;
     background-color: #fff;
     .base-title-head {
       .beafter-span {
