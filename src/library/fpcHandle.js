@@ -29,7 +29,7 @@ function fpcResetForm() {
   $('.option-list').hide()
   $('.fpc-d-item0').val('')
   $('.fpc-d-item1').text('')
-  if (resetindustry) $('.fpc-d-item2').text('请选择所属行业')
+  // if (resetindustry) $('.fpc-d-item2').text('请选择所属行业')
   $('.fpc-d-item3').val('')
   $('.fpc-d-item4').val('')
   $('.fpc-d-item5').val('')
@@ -204,10 +204,6 @@ function watchDialogBtnClick() {
     var dialogShowList = $(this).data('show')
     // 获取 提交按钮文字
     var dialogSubmit = $(this).data('submit')
-    resetindustry = $(this).data('resetindustry') || false
-    // if (resetindustry) {
-    //   $('.fpc-d-item2').text('请选择所属行业')
-    // }
     // 传递logo名字给dialog
     $('.fpc-d-item1').text($(this).data('logoname') || '')
     $('.fpc-mask').show()
