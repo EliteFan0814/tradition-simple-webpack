@@ -557,6 +557,15 @@ body {
               font-size: 13px;
               color: #333333;
               font-weight: bold;
+              .hot {
+                position: relative;
+                img {
+                  position: absolute;
+                  right: -27px;
+                  top: -10px;
+                  width: 25px;
+                }
+              }
             }
             p {
               color: #999999;

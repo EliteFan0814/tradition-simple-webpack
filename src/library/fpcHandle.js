@@ -33,6 +33,7 @@ function fpcResetForm() {
   $('.fpc-d-item3').val('')
   $('.fpc-d-item4').val('')
   $('.fpc-d-item5').val('')
+  $('.index-phone').val('')
 }
 // 下拉框显示
 function watchFpcSelect() {
@@ -223,6 +224,28 @@ function watchDialogBtnClick() {
     }
   })
 }
+// 监听页面上的提交
+function watchIndexSubmit() {
+  $('.index-submit').on('click', function () {
+    // 验证手机号
+    if (!fpcIsPhone('.index-phone')) {
+      $('.index-phone-warn').show()
+      return false
+    }
+    // 通过验证
+    $('.index-phone-warn').hide()
+    // 验证是否勾选协议
+    if ($('.index-yes').css('display') === 'none') {
+      $('.index-pop').show()
+      return false
+    }
+    // 通过验证
+    $('.index-pop').hide()
+    // 在下面进行提交操作 fpc todo
+    // 提交成功
+    showSuccess()
+  })
+}
 // 监听dialog内提交按钮
 function watchDialogSubmit() {
   $('.dialog-submit').on('click', function () {
@@ -255,6 +278,14 @@ function dialogPrivacy() {
       $('.dialog-yes').hide()
     }
   )
+  $('.index-privacy').toggle(
+    function () {
+      $('.index-yes').show()
+    },
+    function () {
+      $('.index-yes').hide()
+    }
+  )
 }
 // 初始化
 function pageInit() {
@@ -268,6 +299,7 @@ function pageInit() {
   watchDialogBtnClick()
   dialogPrivacy()
   watchDialogSubmit()
+  watchIndexSubmit()
   watchFpcSelect()
   watchFpcSelectClick()
 }
