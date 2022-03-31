@@ -26,7 +26,8 @@
         <div class="input-wrap">
           <input type="text" placeholder="请输入商标名称，如中细软">
         </div>
-        <button class="base-btn search-btn">查询能否注册</button>
+        <button class="base-btn search-btn dialog-btn" data-title="商标近似免费查询" data-submit="查询能否注册"
+          data-show="[1,0,0,0,0,1]">查询能否注册</button>
       </div>
       <!-- title 快捷工具 -->
       <div class="base-title-head">
@@ -294,7 +295,7 @@
                     </div>
                   </div>
                   <!-- 家居 -->
-                  <div class="core-content flex relevance-item" data-index="2">
+                  <div class="core-content flex relevance-item" data-index="3">
                     <div class="c-c-item flex-c">
                       <div class="img-wrap "><img src="./imgs/21.png" alt=""></div> <span>21类-厨卫用具</span>
                     </div>
@@ -309,7 +310,7 @@
                     </div>
                   </div>
                   <!-- 化妆品 -->
-                  <div class="core-content flex relevance-item" data-index="2">
+                  <div class="core-content flex relevance-item" data-index="4">
                     <div class="c-c-item flex-c">
                       <div class="img-wrap "><img src="./imgs/01.png" alt=""></div> <span>01类-化妆制剂</span>
                     </div>
@@ -324,7 +325,7 @@
                     </div>
                   </div>
                   <!-- 旅游 -->
-                  <div class="core-content flex relevance-item" data-index="2">
+                  <div class="core-content flex relevance-item" data-index="5">
                     <div class="c-c-item flex-c">
                       <div class="img-wrap "><img src="./imgs/22.png" alt=""></div> <span>22类-户外帐篷</span>
                     </div>
@@ -339,7 +340,7 @@
                     </div>
                   </div>
                   <!-- 传媒 -->
-                  <div class="core-content flex relevance-item" data-index="2">
+                  <div class="core-content flex relevance-item" data-index="6">
                     <div class="c-c-item flex-c">
                       <div class="img-wrap "><img src="./imgs/09.png" alt=""></div> <span>09类-拍摄器材</span>
                     </div>
@@ -354,7 +355,7 @@
                     </div>
                   </div>
                   <!-- 摄影 -->
-                  <div class="core-content flex relevance-item" data-index="2">
+                  <div class="core-content flex relevance-item" data-index="7">
                     <div class="c-c-item flex-c">
                       <div class="img-wrap "><img src="./imgs/16.png" alt=""></div> <span>16类-相册海报</span>
                     </div>
@@ -368,9 +369,175 @@
                       <div class="img-wrap "><img src="./imgs/42.png" alt=""></div> <span>42类-在线设计</span>
                     </div>
                   </div>
+                  <!-- 汽车 -->
+                  <div class="core-content flex relevance-item" data-index="8">
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/04.png" alt=""></div> <span>04类-汽车燃料</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/35.png" alt=""></div> <span>35类-汽车销售</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/37.png" alt=""></div> <span>37类-维修保养</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/39.png" alt=""></div> <span>39类-运输租车</span>
+                    </div>
+                  </div>
+                  <!-- 化工 -->
+                  <div class="core-content flex relevance-item" data-index="9">
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/03.png" alt=""></div> <span>03类-清洁制剂</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/07.png" alt=""></div> <span>07类-化工设备</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/09.png" alt=""></div> <span>09类-实验仪器</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/42.png" alt=""></div> <span>42类-化学研究</span>
+                    </div>
+                  </div>
+                  <!-- 医疗 -->
+                  <div class="core-content flex relevance-item" data-index="10">
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/07.png" alt=""></div> <span>07类-制药机械</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/11.png" alt=""></div> <span>11类-消毒设备</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/42.png" alt=""></div> <span>42类-医药研究</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/44.png" alt=""></div> <span>44类-医疗服务</span>
+                    </div>
+                  </div>
+                  <!-- 母婴 -->
+                  <div class="core-content flex relevance-item" data-index="11">
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/03.png" alt=""></div> <span>03类-母婴日化</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/12.png" alt=""></div> <span>12类-婴儿车</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/20.png" alt=""></div> <span>20类-婴儿床枕</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/45.png" alt=""></div> <span>45类-家政服务</span>
+                    </div>
+                  </div>
+                  <!-- 珠宝 -->
+                  <div class="core-content flex relevance-item" data-index="12">
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/36.png" alt=""></div> <span>36类-珠宝股价</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/37.png" alt=""></div> <span>37类-维修保养</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/40.png" alt=""></div> <span>40类-珠宝加工</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/45.png" alt=""></div> <span>45类-首饰出租</span>
+                    </div>
+                  </div>
+                  <!-- 宠物 -->
+                  <div class="core-content flex relevance-item" data-index="13">
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/03.png" alt=""></div> <span>03类-宠物洗浴</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/05.png" alt=""></div> <span>05类-宠物医药</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/31.png" alt=""></div> <span>31类-宠物食品</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/43.png" alt=""></div> <span>43类-宠物寄养</span>
+                    </div>
+                  </div>
+                  <!-- 互联网 -->
+                  <div class="core-content flex relevance-item" data-index="14">
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/35.png" alt=""></div> <span>35类-在线推广</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/38.png" alt=""></div> <span>38类-在线咨询</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/41.png" alt=""></div> <span>41类-娱乐服务</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/45.png" alt=""></div> <span>45类-社交互动</span>
+                    </div>
+                  </div>
+                  <!-- 乐器 -->
+                  <div class="core-content flex relevance-item" data-index="15">
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/09.png" alt=""></div> <span>09类-电子乐谱</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/16.png" alt=""></div> <span>16类-活页乐谱</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/35.png" alt=""></div> <span>35类-在线招生</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/38.png" alt=""></div> <span>38类-声乐广播</span>
+                    </div>
+                  </div>
+                  <!-- 健身 -->
+                  <div class="core-content flex relevance-item" data-index="16">
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/10.png" alt=""></div> <span>10类-建雄器具</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/25.png" alt=""></div> <span>25类-运动服饰</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/27.png" alt=""></div> <span>27类-健身用垫</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/44.png" alt=""></div> <span>44类-营养指导</span>
+                    </div>
+                  </div>
+                  <!-- 地产 -->
+                  <div class="core-content flex relevance-item" data-index="17">
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/02.png" alt=""></div> <span>02类-油漆涂料</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/19.png" alt=""></div> <span>19类-建筑材料</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/44.png" alt=""></div> <span>44类-园艺服务</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/45.png" alt=""></div> <span>45类-物管社区</span>
+                    </div>
+                  </div>
+                  <!-- 建材 -->
+                  <div class="core-content flex relevance-item" data-index="18">
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/01.png" alt=""></div> <span>01类-粘合剂</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/02.png" alt=""></div> <span>02类-油漆涂料</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/40.png" alt=""></div> <span>40类-建材加工</span>
+                    </div>
+                    <div class="c-c-item flex-c">
+                      <div class="img-wrap "><img src="./imgs/42.png" alt=""></div> <span>42类-建筑设计</span>
+                    </div>
+                  </div>
                 </div>
                 <div class="btn-wrap">
-                  <button class="base-btn">获取详细注册方案</button>
+                  <button class="base-btn dialog-btn" data-title="注册方案查询" data-submit="免费查询"
+                    data-show="[0,0,1,0,0,1]">获取详细注册方案</button>
                 </div>
               </div>
               <div class="industry-other">
@@ -382,13 +549,13 @@
                   <div class="base-input-wrap the-last">
                     <img class="required" src="./imgs/star.png" alt="">
                     <input type="text" placeholder="请输入您的手机号">
-                    <div class="phone-warn">请输入正确的手机号</div>
+                    <div class="phone-warn index-phone-warn">请输入正确的手机号</div>
                   </div>
-                  <button class="base-btn dialog-submit">查询能否注册</button>
+                  <button class="base-btn index-submit">查询能否注册</button>
                   <div class="privacy flex-cc">
                     <div class="check-block flex-cc">
-                      <img class="pop" src="./imgs/pop.png" alt="">
-                      <img src="./imgs/success.png" alt="">
+                      <img class="pop index-pop" src="./imgs/pop.png" alt="">
+                      <img class="check-yes index-yes" src="./imgs/success.png" alt="">
                     </div>
                     <div class="explain">我已阅读并接受中细软集团<span class="book">《隐私权政策》</span></div>
                   </div>
@@ -414,7 +581,8 @@
                 <p>通过大数据分析，为您提供可注册<br>类别的初步建议，有效提高注册成功率！</p>
               </div>
             </div>
-            <div class="flex-cc"><button class="base-btn">免费查询能否注册</button></div>
+            <div class="flex-cc"><button class="base-btn dialog-btn" data-title="商标近似免费查询" data-submit="查询能否注册"
+                data-show="[1,0,0,0,0,1]">免费查询能否注册</button></div>
           </div>
         </div>
         <!-- 购买现成商标 -->
@@ -427,7 +595,8 @@
             <span class="span3 buy-span">购买商标，<br>怎么办理过户手续？</span>
             <span class="span4 buy-span">拓展海外业务，<br>商标有啥特殊要求？</span>
             <span class="span5 buy-span">商标使用年限多久？<br> 到期怎么办？</span>
-            <div class="flex-cc"><button class="base-btn">免费查询能否注册</button></div>
+            <div class="flex-cc"><button class="base-btn dialog-btn" data-title="免费找商标" data-submit="查询能否注册"
+                data-show="[0,0,1,1,0,1]" data-resetindustry="true">免费查询能否注册</button></div>
           </div>
         </div>
 
@@ -452,7 +621,8 @@
               <h3>商标极速注册</h3>
               <p>商标注册＋【59分钟】极速服务通道</p>
             </div>
-            <button class="base-btn">咨询办理</button>
+            <button class="base-btn dialog-btn" data-title="商标极速注册" data-submit="咨询办理"
+              data-show="[0,0,0,0,0,1]">咨询办理</button>
           </div>
           <div class="reco-item flex-cc">
             <img src="./imgs/reco1.png" alt="">
@@ -460,7 +630,8 @@
               <h3>美颜商标注册</h3>
               <p>商标注册＋LOGO设计</p>
             </div>
-            <button class="base-btn">咨询办理</button>
+            <button class="base-btn dialog-btn" data-title="商标极速注册" data-submit="咨询办理"
+              data-show="[0,0,0,0,0,1]">咨询办理</button>
           </div>
           <div class="reco-item flex-cc">
             <img src="./imgs/reco2.png" alt="">
@@ -468,7 +639,8 @@
               <h3>IP卫士注册</h3>
               <p>商标注册＋法律保护</p>
             </div>
-            <button class="base-btn">咨询办理</button>
+            <button class="base-btn dialog-btn" data-title="商标极速注册" data-submit="咨询办理"
+              data-show="[0,0,0,0,0,1]">咨询办理</button>
           </div>
           <div class="reco-item flex-cc">
             <img src="./imgs/reco3.png" alt="">
@@ -476,7 +648,8 @@
               <h3>普通商标注册</h3>
               <p>智能＋人工双重排查近似</p>
             </div>
-            <button class="base-btn">咨询办理</button>
+            <button class="base-btn dialog-btn" data-title="商标极速注册" data-submit="咨询办理"
+              data-show="[0,0,0,0,0,1]">咨询办理</button>
           </div>
           <div class="reco-item flex-cc">
             <img src="./imgs/reco4.png" alt="">
@@ -484,7 +657,8 @@
               <h3>闲置商标交易</h3>
               <p>百万商标资源随心选,即买即用</p>
             </div>
-            <button class="base-btn">咨询办理</button>
+            <button class="base-btn dialog-btn" data-title="商标极速注册" data-submit="咨询办理"
+              data-show="[0,0,0,0,0,1]">咨询办理</button>
           </div>
         </div>
       </div>
@@ -681,7 +855,7 @@
         </div>
       </div>
       <div class="flex-cc">
-        <button class="base-btn">我要提问</button>
+        <button class="base-btn dialog-btn" data-title="在线提问" data-submit="提交问题" data-show="[0,0,0,0,1,1]">我要提问</button>
       </div>
     </div>
     <!-- 推荐服务 -->
@@ -713,7 +887,9 @@
             <div class="serve-c-wrap flex-dcc">
               <div class="serve-title">商标变更</div>
               <p class="serve-text">变更注册人名义<br>登记地址等注册信息</p>
-              <button class="base-btn2"><span>查看详情</span><img src="./imgs/right-arrow.png" alt=""></button>
+              <button class="base-btn2"><span><a target="_blank"
+                    href="http://wap.ciprun.com/wapzt/190906-sbbg/">查看详情</a></span><img src="./imgs/right-arrow.png"
+                  alt=""></button>
             </div>
           </div>
           <div class="serve-item">
@@ -721,7 +897,8 @@
             <div class="serve-c-wrap flex-dcc">
               <div class="serve-title">商标转让</div>
               <p class="serve-text">商标转让给他人<br>须向商标局提出申请</p>
-              <button class="base-btn2"><span>查看详情</span><img src="./imgs/right-arrow.png" alt=""></button>
+              <button class="base-btn2 dialog-btn" data-title="商标转让" data-submit="咨询详情"
+                data-show="[0,0,0,0,0,1]"><span>咨询详情</span><img src="./imgs/right-arrow.png" alt=""></button>
             </div>
           </div>
           <div class="serve-item">
@@ -729,7 +906,9 @@
             <div class="serve-c-wrap flex-dcc">
               <div class="serve-title">商标续展</div>
               <p class="serve-text">商标到期，需办理<br>续展延长有效期</p>
-              <button class="base-btn2"><span>查看详情</span><img src="./imgs/right-arrow.png" alt=""></button>
+              <button class="base-btn2"><span><a target="_blank"
+                    href="http://wap.ciprun.com/wapzt/190906-xzkz">查看详情</a></span><img src="./imgs/right-arrow.png"
+                  alt=""></button>
             </div>
           </div>
           <div class="serve-item">
@@ -737,7 +916,9 @@
             <div class="serve-c-wrap flex-dcc">
               <div class="serve-title">商标宽展</div>
               <p class="serve-text">未办理续展，可在到期后<br>6个月内提出宽展申请</p>
-              <button class="base-btn2"><span>查看详情</span><img src="./imgs/right-arrow.png" alt=""></button>
+              <button class="base-btn2"><span><a target="_blank"
+                    href="http://wap.ciprun.com/wapzt/190906-xzkz">查看详情</a></span><img src="./imgs/right-arrow.png"
+                  alt=""></button>
             </div>
           </div>
           <div class="serve-item">
@@ -745,7 +926,8 @@
             <div class="serve-c-wrap flex-dcc">
               <div class="serve-title">商标注销</div>
               <p class="serve-text">商标持有人放弃全部或<br>部分商标权</p>
-              <button class="base-btn2"><span>查看详情</span><img src="./imgs/right-arrow.png" alt=""></button>
+              <button class="base-btn2 dialog-btn" data-title="商标注销" data-submit="咨询详情"
+                data-show="[0,0,0,0,0,1]"><span>咨询详情</span><img src="./imgs/right-arrow.png" alt=""></button>
             </div>
           </div>
           <div class="serve-item">
@@ -753,7 +935,8 @@
             <div class="serve-c-wrap flex-dcc">
               <div class="serve-title">商标许可</div>
               <p class="serve-text">授权他人使用商标<br>所提出的备案申请</p>
-              <button class="base-btn2"><span>查看详情</span><img src="./imgs/right-arrow.png" alt=""></button>
+              <button class="base-btn2 dialog-btn" data-title="商标许可" data-submit="咨询详情"
+                data-show="[0,0,0,0,0,1]"><span>咨询详情</span><img src="./imgs/right-arrow.png" alt=""></button>
             </div>
           </div>
         </div>
@@ -763,7 +946,9 @@
             <div class="serve-c-wrap flex-dcc">
               <div class="serve-title">商标异议申请</div>
               <p class="serve-text">异议公示期侵权商标<br>维护品牌权益</p>
-              <button class="base-btn2"><span>查看详情</span><img src="./imgs/right-arrow.png" alt=""></button>
+              <button class="base-btn2"><span><a target="_blank"
+                    href="http://wap.ciprun.com/wapzt/190906-sbyy/">查看详情</a></span><img src="./imgs/right-arrow.png"
+                  alt=""></button>
             </div>
           </div>
           <div class="serve-item">
@@ -771,7 +956,9 @@
             <div class="serve-c-wrap flex-dcc">
               <div class="serve-title">商标驳回复审</div>
               <p class="serve-text">商标注册被驳回，复审是<br>仅有挽回途径</p>
-              <button class="base-btn2"><span>查看详情</span><img src="./imgs/right-arrow.png" alt=""></button>
+              <button class="base-btn2"><span><a target="_blank"
+                    href="http://wap.ciprun.com/wapzt/190906-bhfs">查看详情</a></span><img src="./imgs/right-arrow.png"
+                  alt=""></button>
             </div>
           </div>
           <div class="serve-item">
@@ -779,7 +966,9 @@
             <div class="serve-c-wrap flex-dcc">
               <div class="serve-title">商标撤三</div>
               <p class="serve-text">商标被他人申请，连续三年<br>未使用可申请撤销该商标</p>
-              <button class="base-btn2"><span>查看详情</span><img src="./imgs/right-arrow.png" alt=""></button>
+              <button class="base-btn2"><span><a target="_blank"
+                    href="http://wap.ciprun.com/wapzt/190906-sbcs">查看详情</a></span><img src="./imgs/right-arrow.png"
+                  alt=""></button>
             </div>
           </div>
           <div class="serve-item">
@@ -787,7 +976,9 @@
             <div class="serve-c-wrap flex-dcc">
               <div class="serve-title">商标无效宣告</div>
               <p class="serve-text">宣告他人商标无效<br>打击恶意占有商标资源</p>
-              <button class="base-btn2"><span>查看详情</span><img src="./imgs/right-arrow.png" alt=""></button>
+              <button class="base-btn2"><span><a target="_blank"
+                    href="http://wap.ciprun.com/wapzt/190906-sbwx">查看详情</a></span><img src="./imgs/right-arrow.png"
+                  alt=""></button>
             </div>
           </div>
           <div class="serve-item">
@@ -795,7 +986,9 @@
             <div class="serve-c-wrap flex-dcc">
               <div class="serve-title">商标异议答辩</div>
               <p class="serve-text">反驳异议观点<br>答辩成功即拿证</p>
-              <button class="base-btn2"><span>查看详情</span><img src="./imgs/right-arrow.png" alt=""></button>
+              <button class="base-btn2"><span><a target="_blank"
+                    href="http://wap.ciprun.com/wapzt/190906-sbyy/">查看详情</a></span><img src="./imgs/right-arrow.png"
+                  alt=""></button>
             </div>
           </div>
           <div class="serve-item">
@@ -803,7 +996,8 @@
             <div class="serve-c-wrap flex-dcc">
               <div class="serve-title">知识产权诉讼</div>
               <p class="serve-text">解决一切商标专利<br>版权权属、侵权纠纷</p>
-              <button class="base-btn2"><span>查看详情</span><img src="./imgs/right-arrow.png" alt=""></button>
+              <button class="base-btn2 dialog-btn" data-title="知识产权诉讼" data-submit="咨询详情"
+                data-show="[0,0,0,0,0,1]"><span>咨询详情</span><img src="./imgs/right-arrow.png" alt=""></button>
             </div>
           </div>
         </div>
@@ -820,7 +1014,8 @@
                         </div>
                         <p>第25类-服饰鞋帽</p>
                         <div class="flex-cc">
-                          <button class="base-btn2"><span>免费询价</span></button>
+                          <button class="base-btn2 dialog-btn" data-title="商标免费询价" data-submit="查询能否注册"
+                            data-show="[0,1,0,0,0,1]" data-logoname="慕南枝"><span>免费询价</span></button>
                         </div>
                       </div>
                     </div>
@@ -831,7 +1026,8 @@
                         </div>
                         <p>第43类-餐饮住宿</p>
                         <div class="flex-cc">
-                          <button class="base-btn2"><span>免费询价</span></button>
+                          <button class="base-btn2 dialog-btn" data-title="商标免费询价" data-submit="查询能否注册"
+                            data-show="[0,1,0,0,0,1]" data-logoname="月塘萩芦园"><span>免费询价</span></button>
                         </div>
                       </div>
                     </div>
@@ -842,7 +1038,8 @@
                         </div>
                         <p>第20类-家具</p>
                         <div class="flex-cc">
-                          <button class="base-btn2"><span>免费询价</span></button>
+                          <button class="base-btn2 dialog-btn" data-title="商标免费询价" data-submit="查询能否注册"
+                            data-show="[0,1,0,0,0,1]" data-logoname="厨町"><span>免费询价</span></button>
                         </div>
                       </div>
                     </div>
@@ -853,7 +1050,8 @@
                         </div>
                         <p>第09类-科学仪器</p>
                         <div class="flex-cc">
-                          <button class="base-btn2"><span>免费询价</span></button>
+                          <button class="base-btn2 dialog-btn" data-title="商标免费询价" data-submit="查询能否注册"
+                            data-show="[0,1,0,0,0,1]" data-logoname="迈鸽"><span>免费询价</span></button>
                         </div>
                       </div>
                     </div>
@@ -864,7 +1062,8 @@
                         </div>
                         <p>第25类-服饰鞋帽</p>
                         <div class="flex-cc">
-                          <button class="base-btn2"><span>免费询价</span></button>
+                          <button class="base-btn2 dialog-btn" data-title="商标免费询价" data-submit="查询能否注册"
+                            data-show="[0,1,0,0,0,1]" data-logoname="茵美意"><span>免费询价</span></button>
                         </div>
                       </div>
                     </div>
@@ -875,7 +1074,8 @@
                         </div>
                         <p>第25类-服饰鞋帽</p>
                         <div class="flex-cc">
-                          <button class="base-btn2"><span>免费询价</span></button>
+                          <button class="base-btn2 dialog-btn" data-title="商标免费询价" data-submit="查询能否注册"
+                            data-show="[0,1,0,0,0,1]" data-logoname="韩贝彩"><span>免费询价</span></button>
                         </div>
                       </div>
                     </div>
@@ -886,7 +1086,8 @@
                         </div>
                         <p>第05类-医药</p>
                         <div class="flex-cc">
-                          <button class="base-btn2"><span>免费询价</span></button>
+                          <button class="base-btn2 dialog-btn" data-title="商标免费询价" data-submit="查询能否注册"
+                            data-show="[0,1,0,0,0,1]" data-logoname="妙醒"><span>免费询价</span></button>
                         </div>
                       </div>
                     </div>
@@ -897,7 +1098,8 @@
                         </div>
                         <p>第25类-日化用品</p>
                         <div class="flex-cc">
-                          <button class="base-btn2"><span>免费询价</span></button>
+                          <button class="base-btn2 dialog-btn" data-title="商标免费询价" data-submit="查询能否注册"
+                            data-show="[0,1,0,0,0,1]" data-logoname="茶代码"><span>免费询价</span></button>
                         </div>
                       </div>
                     </div>
@@ -908,7 +1110,8 @@
                         </div>
                         <p>第43类-餐饮住宿</p>
                         <div class="flex-cc">
-                          <button class="base-btn2"><span>免费询价</span></button>
+                          <button class="base-btn2 dialog-btn" data-title="商标免费询价" data-submit="查询能否注册"
+                            data-show="[0,1,0,0,0,1]" data-logoname="公卿食府"><span>免费询价</span></button>
                         </div>
                       </div>
                     </div>
@@ -923,7 +1126,8 @@
                         </div>
                         <p>第21类-厨房洁具</p>
                         <div class="flex-cc">
-                          <button class="base-btn2"><span>免费询价</span></button>
+                          <button class="base-btn2 dialog-btn" data-title="商标免费询价" data-submit="查询能否注册"
+                            data-show="[0,1,0,0,0,1]" data-logoname="幸运钥匙"><span>免费询价</span></button>
                         </div>
                       </div>
                     </div>
@@ -934,7 +1138,8 @@
                         </div>
                         <p>第24类-布料床单</p>
                         <div class="flex-cc">
-                          <button class="base-btn2"><span>免费询价</span></button>
+                          <button class="base-btn2 dialog-btn" data-title="商标免费询价" data-submit="查询能否注册"
+                            data-show="[0,1,0,0,0,1]" data-logoname="工匠日记"><span>免费询价</span></button>
                         </div>
                       </div>
                     </div>
@@ -945,7 +1150,8 @@
                         </div>
                         <p>第32类-啤酒饮料</p>
                         <div class="flex-cc">
-                          <button class="base-btn2"><span>免费询价</span></button>
+                          <button class="base-btn2 dialog-btn" data-title="商标免费询价" data-submit="查询能否注册"
+                            data-show="[0,1,0,0,0,1]" data-logoname="冰趣乐"><span>免费询价</span></button>
                         </div>
                       </div>
                     </div>
@@ -956,7 +1162,8 @@
                         </div>
                         <p>第33类-酒</p>
                         <div class="flex-cc">
-                          <button class="base-btn2"><span>免费询价</span></button>
+                          <button class="base-btn2 dialog-btn" data-title="商标免费询价" data-submit="查询能否注册"
+                            data-show="[0,1,0,0,0,1]" data-logoname="慕桃花"><span>免费询价</span></button>
                         </div>
                       </div>
                     </div>
@@ -967,7 +1174,8 @@
                         </div>
                         <p>第30类-方便食品</p>
                         <div class="flex-cc">
-                          <button class="base-btn2"><span>免费询价</span></button>
+                          <button class="base-btn2 dialog-btn" data-title="商标免费询价" data-submit="查询能否注册"
+                            data-show="[0,1,0,0,0,1]" data-logoname="村爷爷"><span>免费询价</span></button>
                         </div>
                       </div>
                     </div>
@@ -978,7 +1186,8 @@
                         </div>
                         <p>第25类-服装鞋帽</p>
                         <div class="flex-cc">
-                          <button class="base-btn2"><span>免费询价</span></button>
+                          <button class="base-btn2 dialog-btn" data-title="商标免费询价" data-submit="查询能否注册"
+                            data-show="[0,1,0,0,0,1]" data-logoname="都美汇"><span>免费询价</span></button>
                         </div>
                       </div>
                     </div>
@@ -989,7 +1198,8 @@
                         </div>
                         <p>第32类-啤酒饮料</p>
                         <div class="flex-cc">
-                          <button class="base-btn2"><span>免费询价</span></button>
+                          <button class="base-btn2 dialog-btn" data-title="商标免费询价" data-submit="查询能否注册"
+                            data-show="[0,1,0,0,0,1]" data-logoname="冰博"><span>免费询价</span></button>
                         </div>
                       </div>
                     </div>
@@ -1000,7 +1210,8 @@
                         </div>
                         <p>第09类-科学仪器</p>
                         <div class="flex-cc">
-                          <button class="base-btn2"><span>免费询价</span></button>
+                          <button class="base-btn2 dialog-btn" data-title="商标免费询价" data-submit="查询能否注册"
+                            data-show="[0,1,0,0,0,1]" data-logoname="IME"><span>免费询价</span></button>
                         </div>
                       </div>
                     </div>
@@ -1011,7 +1222,8 @@
                         </div>
                         <p>第28类-健身器材</p>
                         <div class="flex-cc">
-                          <button class="base-btn2"><span>免费询价</span></button>
+                          <button class="base-btn2 dialog-btn" data-title="商标免费询价" data-submit="查询能否注册"
+                            data-show="[0,1,0,0,0,1]" data-logoname="钓之歌"><span>免费询价</span></button>
                         </div>
                       </div>
                     </div>
@@ -1078,42 +1290,87 @@
     <div class="fpc-mask">
       <!-- 表单提交 dialog -->
       <div class="base-dialog form-dialog">
-        <div class="close dialog-close"><img src="./imgs/close.png" alt=""></div>
-        <div class="title">注册方案查询</div>
-        <div class="input-wrap flex-dcc">
-          <div class="select-wrap">
-            <select id="dialog-select-industry-value">
+        <div class="close"><img class="dialog-close" src="./imgs/close.png" alt=""></div>
+        <div class="title dialog-title">注册方案查询</div>
+        <div class="input-wrap flex-dcc" id="dialog-list">
+          <!-- 0 商标名称 -->
+          <div class="base-input-wrap dialog-item" data-index="0">
+            <input class="fpc-d-item0" type="text" placeholder="请输入商标名称，如中细软">
+          </div>
+          <!-- 1 商标名称2 -->
+          <div class="logo-name dialog-item" data-index="1">商标名称：<span class="fpc-d-item1"></span></div>
+          <!-- 2 所属行业 -->
+          <div data-index="2" class="select-wrap dialog-item">
+            <!-- <div class="fpc-d-item2 fpc-select flex-cc"> -->
+            <div class=" fpc-select">
+              <div class="fpc-i-select flex-cc">
+                <span class="fpc-d-item2">餐饮</span><img src="./imgs/Triangle.png" alt="">
+              </div>
+              <ul class="option-list">
+                <li value="餐饮" class="li-active">餐饮</li>
+                <li value="食品">食品</li>
+                <li value="服装">服装</li>
+                <li value="家居">家居</li>
+                <li value="化妆品">化妆品</li>
+                <li value="旅游">旅游</li>
+                <li value="传媒">传媒</li>
+                <li value="摄影">摄影</li>
+                <li value="汽车">汽车</li>
+                <li value="化工">化工</li>
+                <li value="医疗">医疗</li>
+                <li value="母婴">母婴</li>
+                <li value="珠宝">珠宝</li>
+                <li value="宠物">宠物</li>
+                <li value="互联网/IT">互联网/IT</li>
+                <li value="乐器">乐器</li>
+                <li value="健身">健身</li>
+                <li value="地产">地产</li>
+                <li value="建材">建材</li>
+              </ul>
+            </div>
+            <!-- <select class="fpc-d-item2" id="dialog-select-industry-value">
               <option value="">行业类型</option>
-              <option value="新一代信息技术">新一代信息技术</option>
-              <option value="集成电路">集成电路</option>
-              <option value="医药健康">医药健康</option>
-              <option value="节能环保">节能环保</option>
-              <option value="新材料">新材料</option>
-              <option value="航空航天">航空航天</option>
-              <option value="人工智能">人工智能</option>
-              <option value="软件和信息服务">软件和信息服务</option>
-              <option value="科技服务业">科技服务业</option>
-              <option value="新能源智能汽车">新能源智能汽车</option>
-              <option value="其他">其他</option>
+              <option value="餐饮">餐饮</option>
+              <option value="食品">食品</option>
+              <option value="服装">服装</option>
+              <option value="家居">家居</option>
+              <option value="化妆品">化妆品</option>
+              <option value="旅游">旅游</option>
+              <option value="传媒">传媒</option>
+              <option value="摄影">摄影</option>
+              <option value="汽车">汽车</option>
+              <option value="化工">化工</option>
+              <option value="医疗">医疗</option>
+              <option value="母婴">母婴</option>
+              <option value="珠宝">珠宝</option>
+              <option value="宠物">宠物</option>
+              <option value="互联网/IT">互联网/IT</option>
+              <option value="乐器">乐器</option>
+              <option value="健身">健身</option>
+              <option value="地产">地产</option>
+              <option value="建材">建材</option>
             </select>
-            <img src="./imgs/Triangle.png" alt="">
+            <img src="./imgs/Triangle.png" alt=""> -->
           </div>
-          <div class="base-input-wrap">
-            <textarea class="textarea" rows="3" cols="30" placeholder="商标名称或包含的文字"></textarea>
+          <!-- 3 商标描述 -->
+          <div class="base-input-wrap dialog-item" data-index="3">
+            <input class="fpc-d-item3" type="text" placeholder="商标名称或包含的文字">
           </div>
-          <div class="base-input-wrap">
-            <input type="text" placeholder="商标名称或包含的文字">
+          <!-- 4 问题描述 -->
+          <div class="base-input-wrap dialog-item" data-index="4">
+            <textarea class="textarea fpc-d-item4" rows="3" cols="30" placeholder="请输入您要咨询的问题"></textarea>
           </div>
-          <div class="base-input-wrap the-last">
+          <!-- 5 手机号码 -->
+          <div class="base-input-wrap the-last dialog-item" data-index="5">
             <img class="required" src="./imgs/star.png" alt="">
-            <input type="text" placeholder="请输入您的手机号">
-            <div class="phone-warn">请输入正确的手机号</div>
+            <input class="dialog-phone fpc-d-item5" type="text" placeholder="请输入您的手机号">
+            <div class="phone-warn dialog-phone-warn">请输入正确的手机号</div>
           </div>
           <button class="base-btn dialog-submit">免费查询</button>
           <div class="privacy flex-cc">
-            <div class="check-block flex-cc">
-              <img class="pop" src="./imgs/pop.png" alt="">
-              <img src="./imgs/success.png" alt="">
+            <div class="check-block dialog-privacy flex-cc">
+              <img class="pop dialog-pop" src="./imgs/pop.png" alt="">
+              <img class="dialog-yes" src="./imgs/success.png" alt="">
             </div>
             <div class="explain">我已阅读并接受中细软集团<span class="book">《隐私权政策》</span></div>
           </div>
@@ -1121,8 +1378,8 @@
       </div>
       <!-- 提交成功 dialog -->
       <div class="base-dialog success-dialog">
-        <div class="close dialog-close-success">
-          <img src="./imgs/close.png" alt="">
+        <div class="close">
+          <img class="dialog-close dialog-close-success" src="./imgs/close.png" alt="">
         </div>
         <div class="smile flex-cc">
           <img src="./imgs/smile.png" alt="">

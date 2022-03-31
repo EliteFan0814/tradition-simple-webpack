@@ -1,28 +1,64 @@
+/* 备注 dialog 展示列表 data-show="[1,0,0,0,0,1]"
+0 商标名称
+1 商标名称2
+2 所属行业
+3 商标描述
+4 问题描述
+5 手机号码
+*/
+// 是否reset 行业
+var resetindustry = false
 // 验证手机号
-function isPhone(phone) {
+function fpcIsPhone(inputClass) {
+  var fpcPhone = $(inputClass).val()
   var myreg = /^[1][3,4,5,7,8][0-9]{9}$/
-  if (!myreg.test(phone)) {
+  if (!myreg.test(fpcPhone)) {
     return false
   } else {
     return true
   }
 }
+// 提交成功
+function showSuccess() {
+  $('.fpc-mask').show()
+  $('.form-dialog').hide()
+  $('.success-dialog').show()
+}
+// dialog 表单重置
+function fpcResetForm() {
+  $('.option-list').hide()
+  $('.fpc-d-item0').val('')
+  $('.fpc-d-item1').text('')
+  if (resetindustry) $('.fpc-d-item2').text('请选择所属行业')
+  $('.fpc-d-item3').val('')
+  $('.fpc-d-item4').val('')
+  $('.fpc-d-item5').val('')
+}
+// 下拉框显示
+function watchFpcSelect() {
+  $('.fpc-i-select').on('click', function () {
+    $('.option-list').show()
+  })
+}
+// 下拉框点击
+function watchFpcSelectClick() {
+  $('.option-list>li').on('click', function () {
+    $('.option-list>li').removeClass('li-active')
+    $(this).addClass('li-active')
+    $('.fpc-d-item2').text($(this).text())
+    $('.option-list').hide()
+  })
+}
 // 监听弹框关闭
 function watchCloseDialog() {
   $('.dialog-close').on('click', function () {
-    // resetDialogAllInput()
+    fpcResetForm()
     $('.fpc-mask').hide()
     $('.base-dialog').hide()
   })
 }
-function sss() {
-  $('.sss').on('click', function () {
-    $('.fpc-mask').show()
-    $('.form-dialog').show()
-  })
-}
 // 快捷title点击
-function quickClick() {
+function watchQuickClick() {
   $('.q-title').on('click', function (e) {
     var quickindex = $(this).data('index')
     $(this).addClass('q-title-active')
@@ -68,11 +104,22 @@ function watchIndustryListClick() {
       // 如果点击的是其它
       $('.industry-main').hide()
       $('.industry-other').show()
+      $('.fpc-d-item2').val($(this).text())
+      // fpcIndustry = $(this).text()
     }
     // 高亮点击的当前元素
     $('.industry-list>li').each(function () {
       if (industryIndex === $(this).data('index')) {
+        var indexSelectedIndustry = $(this).text()
         $(this).attr('class', 'active-li')
+        // 将选择的值同步到弹出的dialog框的下拉框中
+        $('.fpc-d-item2').text($(this).text())
+        $('.option-list>li').removeClass('li-active')
+        $('.option-list>li').each(function () {
+          if ($(this).text() == indexSelectedIndustry) {
+            $(this).addClass('li-active')
+          }
+        })
       } else {
         $(this).attr('class', '')
       }
@@ -127,7 +174,7 @@ function newSwiperLogo() {
   })
 }
 // 推荐服务title点击
-function serveClick() {
+function watchServeClick() {
   $('.s-tab-item').on('click', function (e) {
     var serveIndex = $(this).data('index')
     $(this).addClass('s-tab-active')
@@ -147,12 +194,83 @@ function serveClick() {
     })
   })
 }
-$(function () {
+// 监听弹框按钮的点击
+function watchDialogBtnClick() {
+  $('.dialog-btn').on('click', function () {
+    // 获取 title
+    var dialogTitle = $(this).data('title')
+    // 获取 需显示列表
+    var dialogShowList = $(this).data('show')
+    // 获取 提交按钮文字
+    var dialogSubmit = $(this).data('submit')
+    resetindustry = $(this).data('resetindustry') || false
+    // if (resetindustry) {
+    //   $('.fpc-d-item2').text('请选择所属行业')
+    // }
+    // 传递logo名字给dialog
+    $('.fpc-d-item1').text($(this).data('logoname') || '')
+    $('.fpc-mask').show()
+    $('.form-dialog').show()
+    $('.dialog-title').text(dialogTitle)
+    $('.dialog-submit').text(dialogSubmit)
+    // 遍历展示需要显示的输入框
+    for (var i = 0; i < dialogShowList.length; i++) {
+      if (dialogShowList[i]) {
+        $('.dialog-item').eq(i).show()
+      } else {
+        $('.dialog-item').eq(i).hide()
+      }
+    }
+  })
+}
+// 监听dialog内提交按钮
+function watchDialogSubmit() {
+  $('.dialog-submit').on('click', function () {
+    // 验证手机号
+    if (!fpcIsPhone('.dialog-phone')) {
+      $('.dialog-phone-warn').show()
+      return false
+    }
+    // 通过验证
+    $('.dialog-phone-warn').hide()
+    // 验证是否勾选协议
+    if ($('.dialog-yes').css('display') === 'none') {
+      $('.dialog-pop').show()
+      return false
+    }
+    // 通过验证
+    $('.dialog-pop').hide()
+    // 在下面进行提交操作 fpc todo
+    // 提交成功
+    showSuccess()
+  })
+}
+// 是否同意协议
+function dialogPrivacy() {
+  $('.dialog-privacy').toggle(
+    function () {
+      $('.dialog-yes').show()
+    },
+    function () {
+      $('.dialog-yes').hide()
+    }
+  )
+}
+// 初始化
+function pageInit() {
   newSwiperProfessor()
   newSwiperProblem()
   newSwiperLogo()
   watchCloseDialog()
-  quickClick()
+  watchQuickClick()
   watchIndustryListClick()
-  serveClick()
+  watchServeClick()
+  watchDialogBtnClick()
+  dialogPrivacy()
+  watchDialogSubmit()
+  watchFpcSelect()
+  watchFpcSelectClick()
+}
+$(function () {
+  pageInit()
 })
