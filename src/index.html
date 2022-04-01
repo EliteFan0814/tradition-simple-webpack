@@ -23,10 +23,10 @@
       <div class="first-slogan"><img src="./imgs/first-slogan.png" alt=""></div>
       <div class="search-box flex-cc">
         <div class="input-wrap">
-          <input type="text" placeholder="请输入商标名称，如中细软">
+          <input class="index-search-value" type="text" placeholder="请输入商标名称，如中细软">
         </div>
         <button class="base-btn search-btn dialog-btn" data-title="商标近似免费查询" data-submit="查询能否注册"
-          data-show="[1,0,0,0,0,1]">查询能否注册</button>
+          data-show="[1,0,0,0,0,1]" data-trans="true" data-show-success="false">查询能否注册</button>
       </div>
       <!-- title 快捷工具 -->
       <div class="base-title-head">
@@ -547,7 +547,7 @@
                   </div>
                   <div class="base-input-wrap the-last">
                     <img class="required" src="./imgs/star.png" alt="">
-                    <input type="text" class="index-phone" placeholder="请输入您的手机号">
+                    <input type="text" class="index-phone" maxlength="11" placeholder="请输入您的手机号">
                     <div class="phone-warn index-phone-warn">请输入正确的手机号</div>
                   </div>
                   <button class="base-btn index-submit">查询能否注册</button>
@@ -581,7 +581,7 @@
               </div>
             </div>
             <div class="flex-cc"><button class="base-btn dialog-btn" data-title="商标近似免费查询" data-submit="查询能否注册"
-                data-show="[1,0,0,0,0,1]">免费查询能否注册</button></div>
+                data-show="[1,0,0,0,0,1]" data-show-success="false">免费查询能否注册</button></div>
           </div>
         </div>
         <!-- 购买现成商标 -->
@@ -595,7 +595,7 @@
             <span class="span4 buy-span">拓展海外业务，<br>商标有啥特殊要求？</span>
             <span class="span5 buy-span">商标使用年限多久？<br> 到期怎么办？</span>
             <div class="flex-cc"><button class="base-btn dialog-btn" data-title="免费找商标" data-submit="查询能否注册"
-                data-show="[0,0,1,1,0,1]" data-resetindustry="true">免费查询能否注册</button></div>
+                data-show="[0,0,1,1,0,1]">免费查询能否注册</button></div>
           </div>
         </div>
 
@@ -629,7 +629,7 @@
               <h3>美颜商标注册</h3>
               <p>商标注册＋LOGO设计</p>
             </div>
-            <button class="base-btn dialog-btn" data-title="商标极速注册" data-submit="咨询办理"
+            <button class="base-btn dialog-btn" data-title="美颜商标注册" data-submit="咨询办理"
               data-show="[0,0,0,0,0,1]">咨询办理</button>
           </div>
           <div class="reco-item flex-cc">
@@ -638,7 +638,7 @@
               <h3>IP卫士注册</h3>
               <p>商标注册＋法律保护</p>
             </div>
-            <button class="base-btn dialog-btn" data-title="商标极速注册" data-submit="咨询办理"
+            <button class="base-btn dialog-btn" data-title="IP卫士注册" data-submit="咨询办理"
               data-show="[0,0,0,0,0,1]">咨询办理</button>
           </div>
           <div class="reco-item flex-cc">
@@ -647,7 +647,7 @@
               <h3>普通商标注册</h3>
               <p>智能＋人工双重排查近似</p>
             </div>
-            <button class="base-btn dialog-btn" data-title="商标极速注册" data-submit="咨询办理"
+            <button class="base-btn dialog-btn" data-title="普通商标注册" data-submit="咨询办理"
               data-show="[0,0,0,0,0,1]">咨询办理</button>
           </div>
           <div class="reco-item flex-cc">
@@ -656,7 +656,7 @@
               <h3>闲置商标交易</h3>
               <p>百万商标资源随心选,即买即用</p>
             </div>
-            <button class="base-btn dialog-btn" data-title="商标极速注册" data-submit="咨询办理"
+            <button class="base-btn dialog-btn" data-title="闲置商标交易" data-submit="咨询办理"
               data-show="[0,0,0,0,0,1]">咨询办理</button>
           </div>
         </div>
@@ -1325,6 +1325,7 @@
                 <li value="健身">健身</li>
                 <li value="地产">地产</li>
                 <li value="建材">建材</li>
+                <li value="其它">其它</li>
               </ul>
             </div>
             <!-- <select class="fpc-d-item2" id="dialog-select-industry-value">
@@ -1362,7 +1363,7 @@
           <!-- 5 手机号码 -->
           <div class="base-input-wrap the-last dialog-item" data-index="5">
             <img class="required" src="./imgs/star.png" alt="">
-            <input class="dialog-phone fpc-d-item5" type="text" placeholder="请输入您的手机号">
+            <input class="dialog-phone fpc-d-item5" type="text" maxlength="11" placeholder="请输入您的手机号">
             <div class="phone-warn dialog-phone-warn">请输入正确的手机号</div>
           </div>
           <button class="base-btn dialog-submit">免费查询</button>
@@ -1386,6 +1387,28 @@
         <div class="title">提交成功</div>
         <div class="text-wrap"><span class="success-text">稍后会有专业顾问与您电话联系<br>请注意接听~</span></div>
       </div>
+    </div>
+    <div class="online-serve flex">
+      <div class="o-serve-item flex-dcc">
+        <img src="./imgs/o-serve-0.png" alt="">
+        <span>在线咨询</span>
+      </div>
+      <div class="o-serve-item flex-dcc">
+        <img src="./imgs/o-serve-1.png" alt="">
+        <span>费用咨询</span>
+      </div>
+      <div class="o-serve-item flex-dcc">
+        <img src="./imgs/o-serve-2.png" alt="">
+        <span>流程咨询</span>
+      </div>
+      <div class="o-serve-item o-s-last flex-dcc">
+        <img src="./imgs/o-serve-3.png" alt="">
+        <span class="dialog-btn" data-title="商标近似免费查询" data-submit="查询能否注册" data-show="[1,0,0,0,0,1]"
+          data-show-success="false">人工查询</span>
+      </div>
+    </div>
+    <div class="scroll-top">
+      <img src="./imgs/backtop.jpg" alt="">
     </div>
   </div>
   <script src="./library/fpcHandle.js"></script>
