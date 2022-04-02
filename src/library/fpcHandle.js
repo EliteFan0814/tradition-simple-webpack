@@ -20,6 +20,13 @@ function fpcIsPhone(inputClass) {
     return true
   }
 }
+// 关闭所有dialog
+function closeAllDialog() {
+  fpcResetForm()
+  $('.fpc-mask').hide()
+  $('.base-dialog').hide()
+  $('.success-dialog').hide()
+}
 // 提交成功
 function showSuccess() {
   $('.fpc-mask').show()
@@ -135,6 +142,7 @@ function newSwiperProfessor() {
     direction: 'horizontal', // 垂直切换选项
     loop: true, // 循环模式选项
     speed: 300,
+    slidesPerView: 'auto',
     autoplay: {
       delay: 3000
     },
@@ -273,6 +281,7 @@ function watchDialogSubmit() {
       showSuccess()
     } else {
       // 不显示提交成功
+      closeAllDialog()
     }
   })
 }
@@ -295,6 +304,7 @@ function dialogPrivacy() {
     }
   )
 }
+// 监听滑动
 function watchScroll() {
   $(window).on('scroll', function () {
     if ($(window).scrollTop() > $(window).height()) {
@@ -304,6 +314,7 @@ function watchScroll() {
     }
   })
 }
+// 监听返回头部
 function watchBackTop() {
   $('.scroll-top').on('click', function () {
     $('html,body').animate(
@@ -332,6 +343,7 @@ function pageInit() {
   watchScroll()
   watchBackTop()
 }
+// 执行
 $(function () {
   pageInit()
 })

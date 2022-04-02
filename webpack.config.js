@@ -5,7 +5,8 @@ const CopyPlugin = require('copy-webpack-plugin')
 module.exports = {
   entry: {
     // jquery: './src/library/jquery3.6.min.js',
-    main: './src/index.js'
+    'swiper-7.4.1':'./src/library/swiper-bundle-7.4.1.min.css',
+    main: './src/main.js'
   },
   output: {
     filename: '[name].js',
@@ -51,7 +52,7 @@ module.exports = {
                     rootValue: 37.5,
                     // 使用px2rem的css选择器
                     // propList: ['font', 'font-size', 'line-height', 'letter-spacing', 'width', 'height', '*border*']
-                    propList: ['*','!border']
+                    propList: ['*', '!border']
                   })
                 ]
               }
@@ -68,7 +69,7 @@ module.exports = {
       inject: 'body'
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css' //重命名输出的css文件，也可不写默认
+      filename: 'css/[name].css', //重命名输出的css文件，也可不写默认
     }),
     new CopyPlugin({
       patterns: [
