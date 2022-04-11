@@ -42,7 +42,15 @@ function fpcResetForm() {
   $('.fpc-d-item3').val('')
   $('.fpc-d-item4').val('')
   $('.fpc-d-item5').val('')
+  $('.index-industry').val('')
   $('.index-phone').val('')
+  $('.index-phone-warn').hide()
+  $('.dialog-phone').val('')
+  $('.dialog-phone-warn').hide()
+  $('.index-pop').hide()
+  $('.dialog-pop').hide()
+  $('.index-yes').hide()
+  $('.dialog-yes').hide()
 }
 // 下拉框显示
 function watchFpcSelect() {

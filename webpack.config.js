@@ -4,9 +4,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 module.exports = {
   entry: {
-    // jquery: './src/library/jquery3.6.min.js',
-    'swiper-7.4.1':'./src/library/swiper-bundle-7.4.1.min.css',
-    main: './src/main.js'
+    amfeFlexible: './src/amfeFlexible.js',
+    main: './src/main.js',
   },
   output: {
     filename: '[name].js',

@@ -1,3 +1,9 @@
+/*
+目前使用的自适应插件是amfe-flexible.js，
+此插件在屏幕宽度为375px条件下，根font-size=37.5px
+也就是说此时 1rem = 37.5px，注意和公共组件的兼容问题
+*/
+
 html,
 body {
   margin: 0;
@@ -151,6 +157,7 @@ body {
       display: none;
     }
     .textarea {
+      width: 95%;
       border: none;
       outline: none;
       box-shadow: none;
@@ -197,6 +204,9 @@ body {
       .book {
         color: #f32c00;
         text-decoration: underline;
+      }
+      a {
+        color: #f32c00;
       }
     }
   }
@@ -652,9 +662,12 @@ body {
                 margin-bottom: 12px;
               }
               .good-list {
+                // border: 1px solid red;
                 flex-wrap: wrap;
                 margin-bottom: 15.5px;
+                padding-right: 15px;
                 .good-item {
+                  box-sizing: border-box;
                   min-width: 50%;
                   margin-bottom: 10px;
                   img {
