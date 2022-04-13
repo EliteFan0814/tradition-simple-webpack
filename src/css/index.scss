@@ -133,6 +133,16 @@ body {
             }
             .r-value {
               width: 466px;
+              position: relative;
+              .index-error {
+                font-size: 14px;
+                position: absolute;
+                bottom: -18px;
+                left: 0;
+              }
+              .index-trademark-warn {
+                display: none;
+              }
               .base-input {
                 font-size: 18px;
                 padding: 9px;

@@ -55,6 +55,8 @@ function watchDialogPrivacy() {
 // 表单重置
 function fpcResetForm() {
   $('.select-holder').text('请选择国际分类').removeClass('select-value')
+  $('.option-list>li').removeClass('li-active')
+  $('.index-trademark-warn').hide()
   $('.index-trademark-value').val('')
   $('.dialog-trademark-value').val('')
   $('.dialog-phone-value').val('')
@@ -102,6 +104,14 @@ function watchRadioClick() {
 // 监听弹框按钮的点击
 function watchDialogBtnClick() {
   $('.dialog-btn').on('click', function () {
+    if ($(this).data('index-verify')) {
+      if (!$('.index-trademark-value').val()) {
+        $('.index-trademark-warn').show()
+        return false
+      } else {
+        $('.index-trademark-warn').hide()
+      }
+    }
     // 获取 title
     var dialogTitle = $(this).data('title')
     // 获取 手机号提示框
@@ -157,6 +167,13 @@ function showSuccess() {
 // 监听发送验证码
 function watchSendCode() {
   $('.code-btn').on('click', function () {
+    // 验证手机号
+    if (!fpcIsPhone('.dialog-phone-value')) {
+      $('.dialog-phone-warn').show()
+      return false
+    } else {
+      $('.dialog-phone-warn').hide()
+    }
     // 如果没有倒计时
     if (!fpcIsCounting) {
       countDown()
